@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0a0a;
+  --color-paper: #f8f8f8;
+  --color-muted: #737373;
+  --color-line: #e5e5e5;
+}
+
+:root {
+  --color-ink: #0a0a0a;
+  --color-paper: #f8f8f8;
+  --color-muted: #737373;
+  --color-line: #e5e5e5;
+}
+
+html {
+  font-family: "ff-din-paneuropean", system-ui, sans-serif;
+  background-color: var(--color-paper);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-paper);
+  text-rendering: optimizeLegibility;
+}
+
+.page-shell {
+  min-height: 100vh;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.section-pad {
+  padding-block: 4.5rem;
+}
+
+.prose-legal {
+  max-width: 72ch;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: color-mix(in oklab, var(--color-ink), white 35%);
+}
+
+.prose-legal h1,
+.prose-legal h2,
+.prose-legal h3 {
+  color: var(--color-ink);
+}
+
+.prose-legal h2 {
+  margin-top: 2.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.prose-legal h3 {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+}

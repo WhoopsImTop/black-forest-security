@@ -1,0 +1,43 @@
+<template>
+  <footer class="border-t border-neutral-900 bg-black">
+    <div class="container mx-auto px-4 py-16 sm:py-20">
+      <div class="grid gap-14 md:grid-cols-2 xl:grid-cols-4">
+        <section>
+          <p class="font-heading text-sm font-bold text-white">Black Forest Security GmbH</p>
+          <p class="max-w-xs text-sm text-neutral-400">
+            Ihr Partner für Sicherheit und Schutz
+          </p>
+        </section>
+
+        <section>
+          <div class="space-y-3 text-sm text-neutral-400">
+            <p>Black Forest Security GmbH<br />Kaiser-Joseph-Straße 194<br />79098 Freiburg</p>
+            <a href="mailto:info@black-forest-security.de" class="block hover:text-white">info@black-forest-security.de</a>
+          </div>
+        </section>
+
+        <section>
+          <div class="space-y-3 text-sm text-white">
+            <NuxtLink to="/impressum" class="block hover:text-white">Impressum</NuxtLink>
+            <NuxtLink to="/datenschutzerklaerung" class="block hover:text-white">Datenschutzerklärung</NuxtLink>
+          </div>
+        </section>
+        
+        <section>
+          <div class="space-y-3 text-sm text-white">
+            <NuxtLink to="/kontakt" class="block hover:text-white">Kontakt</NuxtLink>
+            <NuxtLink to="/ueber-uns" class="block hover:text-white">Über uns</NuxtLink>
+          </div>
+        </section>
+      </div>
+
+      <div
+        class="mt-14 flex flex-col gap-3 border-t border-neutral-900 pt-8 text-sm text-neutral-600 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <p>© {{ new Date().getFullYear() }} Black Forest Security GmbH</p>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script setup></script>
