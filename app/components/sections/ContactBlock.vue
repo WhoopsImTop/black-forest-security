@@ -17,14 +17,14 @@
             <p
               v-for="(line, index) in officeHours"
               :key="index"
-              class="text-sm leading-relaxed text-neutral-700"
+              class="text-sm text-neutral-700"
             >
               {{ line }}
             </p>
           </div>
           <div>
             <h3 class="mb-3 font-heading text-base font-bold text-black">Adresse</h3>
-            <p class="text-sm leading-relaxed text-neutral-700">
+            <p class="text-sm text-neutral-700">
               {{ address.street }}<br />{{ address.city }}
             </p>
           </div>
