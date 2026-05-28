@@ -36,7 +36,7 @@
           </h1>
           <p
             v-if="lead"
-            class="hero-lead mt-6 max-w-2xl text-base md:text-lg"
+            class="hero-lead mt-6 text-base md:text-lg"
             :class="hasImage ? 'text-white/80' : 'text-neutral-600'"
           >
             {{ lead }}
