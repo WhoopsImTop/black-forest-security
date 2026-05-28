@@ -2,14 +2,14 @@
 
 @theme {
   --color-ink: #0a0a0a;
-  --color-paper: #f8f8f8;
+  --color-paper: #ffffff;
   --color-muted: #737373;
   --color-line: #e5e5e5;
 }
 
 :root {
   --color-ink: #0a0a0a;
-  --color-paper: #f8f8f8;
+  --color-paper: #ffffff;
   --color-muted: #737373;
   --color-line: #e5e5e5;
 }
@@ -37,7 +37,7 @@ body {
 }
 
 .prose-legal {
-  max-width: 72ch;
+  max-width: 100ch;
   font-size: 0.95rem;
   line-height: 1.75;
   color: color-mix(in oklab, var(--color-ink), white 35%);

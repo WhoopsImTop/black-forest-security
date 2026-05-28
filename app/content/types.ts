@@ -7,6 +7,7 @@ export interface ContentSection {
   id: string;
   title?: string;
   paragraphs: string[];
+  centered?: boolean;
 }
 
 export interface FeatureItem {
@@ -39,6 +40,7 @@ export interface ServicePageContent {
 export interface TeamMember {
   name: string;
   role: string;
+  image?: string;
 }
 
 export interface LegalBlock {
@@ -51,4 +53,23 @@ export interface LegalPageContent {
   seo: SeoMeta;
   title: string;
   blocks: LegalBlock[];
+}
+
+export interface CityKeywordTarget {
+  primary: string;
+  secondary: string[];
+}
+
+export interface CityPageContent {
+  slug: string;
+  city: string;
+  region: string;
+  seo: SeoMeta;
+  heroTitle: string;
+  heroLead: string;
+  trustTitle: string;
+  trustParagraphs: string[];
+  sections: ContentSection[];
+  faq: FaqItem[];
+  keywordTarget: CityKeywordTarget;
 }

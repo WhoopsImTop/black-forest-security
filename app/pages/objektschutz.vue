@@ -10,8 +10,10 @@
       :key="section.id"
       :title="section.title"
       :paragraphs="section.paragraphs"
+      :centered="section.centered ?? true"
     />
-    <SectionsFaqAccordion v-if="content.faq" :items="content.faq" />
+    <SectionsFaqAccordion v-if="content.faq" :items="content.faq" centered />
+    <SectionsMoreServicesSlider current-slug="objektschutz" />
     <SectionsCtaBand />
   </div>
 </template>

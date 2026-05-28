@@ -1,5 +1,5 @@
 <template>
-  <section class="border-b border-neutral-200 bg-white">
+  <section class="bg-white">
     <div class="container mx-auto px-4 section-pad">
       <div class="grid gap-12 lg:grid-cols-2">
         <div>

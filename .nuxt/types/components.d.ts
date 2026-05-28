@@ -24,6 +24,7 @@ interface _GlobalComponents {
   SectionsFaqAccordion: typeof import("../../app/components/sections/FaqAccordion.vue")['default']
   SectionsFeatureList: typeof import("../../app/components/sections/FeatureList.vue")['default']
   SectionsLandingHero: typeof import("../../app/components/sections/LandingHero.vue")['default']
+  SectionsMoreServicesSlider: typeof import("../../app/components/sections/MoreServicesSlider.vue")['default']
   SectionsPageHero: typeof import("../../app/components/sections/PageHero.vue")['default']
   SectionsServiceCard: typeof import("../../app/components/sections/ServiceCard.vue")['default']
   SectionsServicesGrid: typeof import("../../app/components/sections/ServicesGrid.vue")['default']
@@ -67,6 +68,7 @@ interface _GlobalComponents {
   LazySectionsFaqAccordion: LazyComponent<typeof import("../../app/components/sections/FaqAccordion.vue")['default']>
   LazySectionsFeatureList: LazyComponent<typeof import("../../app/components/sections/FeatureList.vue")['default']>
   LazySectionsLandingHero: LazyComponent<typeof import("../../app/components/sections/LandingHero.vue")['default']>
+  LazySectionsMoreServicesSlider: LazyComponent<typeof import("../../app/components/sections/MoreServicesSlider.vue")['default']>
   LazySectionsPageHero: LazyComponent<typeof import("../../app/components/sections/PageHero.vue")['default']>
   LazySectionsServiceCard: LazyComponent<typeof import("../../app/components/sections/ServiceCard.vue")['default']>
   LazySectionsServicesGrid: LazyComponent<typeof import("../../app/components/sections/ServicesGrid.vue")['default']>

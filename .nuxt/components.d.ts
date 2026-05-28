@@ -24,6 +24,7 @@ export const SectionsCtaBand: typeof import("../app/components/sections/CtaBand.
 export const SectionsFaqAccordion: typeof import("../app/components/sections/FaqAccordion.vue")['default']
 export const SectionsFeatureList: typeof import("../app/components/sections/FeatureList.vue")['default']
 export const SectionsLandingHero: typeof import("../app/components/sections/LandingHero.vue")['default']
+export const SectionsMoreServicesSlider: typeof import("../app/components/sections/MoreServicesSlider.vue")['default']
 export const SectionsPageHero: typeof import("../app/components/sections/PageHero.vue")['default']
 export const SectionsServiceCard: typeof import("../app/components/sections/ServiceCard.vue")['default']
 export const SectionsServicesGrid: typeof import("../app/components/sections/ServicesGrid.vue")['default']
@@ -67,6 +68,7 @@ export const LazySectionsCtaBand: LazyComponent<typeof import("../app/components
 export const LazySectionsFaqAccordion: LazyComponent<typeof import("../app/components/sections/FaqAccordion.vue")['default']>
 export const LazySectionsFeatureList: LazyComponent<typeof import("../app/components/sections/FeatureList.vue")['default']>
 export const LazySectionsLandingHero: LazyComponent<typeof import("../app/components/sections/LandingHero.vue")['default']>
+export const LazySectionsMoreServicesSlider: LazyComponent<typeof import("../app/components/sections/MoreServicesSlider.vue")['default']>
 export const LazySectionsPageHero: LazyComponent<typeof import("../app/components/sections/PageHero.vue")['default']>
 export const LazySectionsServiceCard: LazyComponent<typeof import("../app/components/sections/ServiceCard.vue")['default']>
 export const LazySectionsServicesGrid: LazyComponent<typeof import("../app/components/sections/ServicesGrid.vue")['default']>

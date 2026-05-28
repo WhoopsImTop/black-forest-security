@@ -7,7 +7,6 @@ export const siteContact = {
   phone: "0761 55655725",
   phoneImpressum: "01786375306",
   officeHours: [
-    "Mo – Fr 09:00 – 18:00 Uhr",
-    "Sa 10:00 – 18:00 Uhr",
+    "Mo - So: rund um die Uhr",
   ],
 } as const;

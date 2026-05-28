@@ -1,14 +1,15 @@
 <template>
-  <section ref="sectionRef" class="border-b border-neutral-200 bg-[var(--color-paper)]">
+  <section ref="sectionRef" class="bg-white">
     <div class="container mx-auto px-4 section-pad">
       <UiSectionHeading title="Unser Team" lead="Erfahrene Ansprechpartner für Ihre Sicherheitsanforderungen." />
-      <div class="grid gap-6 md:grid-cols-3">
+      <div class="grid gap-6 md:grid-cols-4">
         <UiTeamCard
           v-for="member in members"
           :key="member.name"
           class="reveal"
           :name="member.name"
           :role="member.role"
+          :image="member.image"
         />
       </div>
     </div>

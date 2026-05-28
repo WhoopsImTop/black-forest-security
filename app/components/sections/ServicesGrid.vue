@@ -1,5 +1,5 @@
 <template>
-  <section id="leistungen" ref="sectionRef" class="border-b border-neutral-200 bg-[var(--color-paper)]">
+  <section id="leistungen" ref="sectionRef" class="bg-white">
     <div class="container mx-auto px-4 section-pad">
       <UiSectionHeading
         title="Sicherheitslösungen aus einer Hand"
@@ -7,7 +7,11 @@
         class="reveal"
       />
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <SectionsServiceCard v-for="service in services" :key="service.slug" :service="service" />
+        <SectionsServiceCard
+          v-for="service in services"
+          :key="service.slug"
+          :service="service"
+        />
       </div>
     </div>
   </section>

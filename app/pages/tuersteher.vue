@@ -10,8 +10,10 @@
       :key="section.id"
       :title="section.title"
       :paragraphs="section.paragraphs"
+      :centered="section.centered ?? true"
     />
     <SectionsFeatureList v-if="content.features" :items="content.features" />
+    <SectionsMoreServicesSlider current-slug="tuersteher" />
     <SectionsCtaBand />
   </div>
 </template>

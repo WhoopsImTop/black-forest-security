@@ -1,5 +1,5 @@
 <template>
-  <section ref="sectionRef" class="border-b border-neutral-200 bg-white">
+  <section ref="sectionRef" class="bg-white">
     <div class="container mx-auto px-4 section-pad">
       <UiSectionHeading
         v-if="heading"

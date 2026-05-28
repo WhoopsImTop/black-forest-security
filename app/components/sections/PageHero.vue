@@ -6,7 +6,7 @@
     :class="
       hasImage
         ? 'flex min-h-[65vh] flex-col justify-end'
-        : 'border-b border-neutral-200 bg-white'
+        : 'bg-white'
     "
   >
     <template v-if="hasImage">

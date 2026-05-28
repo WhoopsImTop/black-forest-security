@@ -117,7 +117,9 @@
 <script setup>
 const navigationItems = [
   { label: "Leistungen", to: "/#leistungen" },
+  { label: "Standorte", to: "/standorte" },
   { label: "Über uns", to: "/ueber-uns" },
+  { label: "Karriere", to: "/karriere" },
   { label: "Kontakt", to: "/kontakt" },
 ];
 

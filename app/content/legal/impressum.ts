@@ -14,7 +14,7 @@ export const impressumContent: LegalPageContent = {
     { type: "h3", text: "Registereintrag Handelsregister" },
     { type: "p", text: "Amtsgericht Freiburg i. Br. (HRB 731407)" },
     { type: "h3", text: "Vertreten durch" },
-    { type: "p", text: "Laszlo Bojarski\nEnrico Stanciu" },
+    { type: "p", text: "Enrico Stanciu" },
     { type: "h2", text: "Kontakt" },
     {
       type: "p",

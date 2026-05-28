@@ -6,14 +6,11 @@
       :lead="landingHero.lead"
     />
     <SectionsServicesGrid />
-    <SectionsStatsSection :items="landingStats" />
-    <section ref="trustRef" class="border-b border-neutral-200 bg-white">
-      <div class="container mx-auto px-4 section-pad">
-        <UiSectionHeading
-          :title="landingTrust.title"
-          class="reveal"
-        />
-        <div class="max-w-3xl space-y-4">
+
+    <section ref="trustRef" class="bg-white">
+      <div class="container mx-auto max-w-3xl text-center px-4 section-pad">
+        <UiSectionHeading :title="landingTrust.title" class="reveal" />
+        <div class="space-y-4">
           <p
             v-for="(paragraph, index) in landingTrust.paragraphs"
             :key="index"
@@ -24,15 +21,28 @@
         </div>
       </div>
     </section>
-    <section class="border-b border-neutral-200 bg-[var(--color-paper)]">
+    <SectionsStatsSection :items="landingStats" />
+    <section class="bg-white">
       <div class="container mx-auto px-4 section-pad">
-        <UiSectionHeading
-          :title="landingAboutTeaser.title"
-          :lead="landingAboutTeaser.text"
-        />
-        <UiButtonLink :to="landingAboutTeaser.ctaTo" variant="outline">
-          {{ landingAboutTeaser.ctaLabel }}
-        </UiButtonLink>
+        <div class="grid items-center gap-8 md:grid-cols-2 lg:gap-12">
+          <div class="overflow-hidden bg-neutral-100">
+            <img
+              :src="heroImages.ueberUns"
+              alt="Team von Black Forest Security"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <UiSectionHeading
+              :title="landingAboutTeaser.title"
+              :lead="landingAboutTeaser.text"
+            />
+            <UiButtonLink :to="landingAboutTeaser.ctaTo" variant="outline">
+              {{ landingAboutTeaser.ctaLabel }}
+            </UiButtonLink>
+          </div>
+        </div>
       </div>
     </section>
     <SectionsCtaBand

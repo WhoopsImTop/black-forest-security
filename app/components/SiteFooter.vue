@@ -25,8 +25,10 @@
         
         <section>
           <div class="space-y-3 text-sm text-white">
+            <NuxtLink to="/standorte" class="block hover:text-white">Standorte</NuxtLink>
             <NuxtLink to="/kontakt" class="block hover:text-white">Kontakt</NuxtLink>
             <NuxtLink to="/ueber-uns" class="block hover:text-white">Über uns</NuxtLink>
+            <NuxtLink to="/karriere" class="block hover:text-white">Karriere</NuxtLink>
           </div>
         </section>
       </div>
