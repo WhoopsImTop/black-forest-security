@@ -18,9 +18,23 @@
 import { kontaktContent, kontaktSeo } from "~/content/contact";
 import { heroImages } from "~/content/hero-images";
 
-useHead({
+import {
+  buildBreadcrumbSchema,
+  buildContactPageSchema,
+  toJsonLdGraph,
+} from "~/utils/seo/schema";
+
+usePageSeo({
   title: kontaktSeo.title,
-  meta: [{ name: "description", content: kontaktSeo.description }],
-  htmlAttrs: { lang: "de" },
+  description: kontaktSeo.description,
+  path: "/kontakt",
+  ogImage: heroImages.kontakt,
+  jsonLd: toJsonLdGraph([
+    buildContactPageSchema(),
+    buildBreadcrumbSchema([
+      { name: "Startseite", path: "/" },
+      { name: "Kontakt", path: "/kontakt" },
+    ]),
+  ]),
 });
 </script>

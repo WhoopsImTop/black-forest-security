@@ -2,19 +2,19 @@ import type { ServicePageContent } from "../types";
 
 export const streifenRevierdienstContent: ServicePageContent = {
   seo: {
-    title: "Streifen- und Revierdienst | Black Forest Security GmbH",
+    title: "Streifen- und Revierdienst Freiburg | Black Forest Security GmbH",
     description:
-      "Streifen- und Revierdienst für kontinuierliche Geländeüberwachung – präventive Sicherheitspräsenz und schnelle Reaktion.",
+      "Streifen- und Revierdienst in Freiburg: mobile Kontrollgänge, präventive Präsenz und schnelle Reaktion für Gewerbe- und Industriegelände.",
   },
   title: "Streifen- und Revierdienst",
-  lead: "Kontinuierliche Überwachung und Kontrolle Ihres Geländes durch erfahrene Sicherheitsprofis.",
+  lead: "Streifen- und Revierdienst in Freiburg und der Region – mobile Überwachung Ihres Geländes durch erfahrene Sicherheitskräfte.",
   sections: [
     {
       id: "intro",
       paragraphs: [
-        "Unser Streifen- und Revierdienst gewährleistet eine kontinuierliche Überwachung und Kontrolle Ihres Geländes. Unsere hochqualifizierten Sicherheitskräfte patrouillieren zu vorher festgelegten Zeiten, um potenzielle Sicherheitsrisiken frühzeitig zu identifizieren und proaktiv darauf zu reagieren.",
-        "Durch regelmäßige Streifen wird eine präventive Sicherheitspräsenz geschaffen, die Ihr Eigentum vor möglichen Bedrohungen schützt. Die gut ausgebildeten Sicherheitskräfte in unserem Streifen- und Revierdienst sind darauf spezialisiert, effektive Sicherheitsmaßnahmen zu ergreifen.",
-        "Mit unserem Streifen- und Revierdienst bieten wir Ihnen die Gewissheit, dass erfahrene Sicherheitsprofis Ihr Gelände im Blick haben – rund um die Uhr geschützt.",
+        "Streifen- und Revierdienst in Freiburg und Umgebung: Regelmäßige Kontrollfahrten und Fußpatrouillen decken Schwachstellen früh auf und schrecken unerwünschte Aktivitäten ab.",
+        "Die Zeiten und Routen legen wir mit Ihnen fest – tagsüber, nachts oder zu definierten Ereignissen.",
+        "So bleibt Ihr Gelände unter professioneller Aufsicht, ohne dauerhafte Präsenz an einem Punkt.",
       ],
     },
   ],
@@ -22,17 +22,17 @@ export const streifenRevierdienstContent: ServicePageContent = {
     {
       question: "Wie funktioniert der Streifen- und Revierdienst genau?",
       answer:
-        "Unser Streifen- und Revierdienst umfasst regelmäßige Patrouillen durch unsere gut ausgebildeten Sicherheitskräfte zu vorher festgelegten Zeiten. Während dieser Streifen identifizieren wir potenzielle Sicherheitsrisiken, reagieren proaktiv darauf und gewährleisten eine kontinuierliche Überwachung Ihres Geländes.",
+        "Geschulte Sicherheitskräfte fahren oder gehen festgelegte Routen ab, prüfen Zugänge und melden Auffälligkeiten sofort an die festgelegten Ansprechpartner – auch in Freiburg und der umliegenden Region.",
     },
     {
       question: "Welche Vorteile bietet der Streifen- und Revierdienst für mein Unternehmen?",
       answer:
-        "Unser Streifen- und Revierdienst bietet eine präventive Sicherheitspräsenz, die dazu beiträgt, potenzielle Bedrohungen abzuschrecken. Durch regelmäßige Patrouillen minimieren wir das Risiko von unerwünschtem Zugang, Vandalismus und anderen Sicherheitsbedrohungen.",
+        "Präventive Sichtbarkeit, frühe Erkennung von Schäden oder Einbrüchen und flexible Einsatzzeiten – oft kosteneffizienter als eine dauerhafte Bewachung.",
     },
     {
       question: "Wie flexibel sind die Streifenzeiten und wie werden sie festgelegt?",
       answer:
-        "Die Streifenzeiten werden in enger Absprache mit Ihnen festgelegt, basierend auf Ihren individuellen Anforderungen und den spezifischen Gegebenheiten Ihres Geländes. Ob tagsüber, nachts oder zu bestimmten Ereignissen – wir passen unsere Streifenzeiten an.",
+        "Streifenzeiten werden individuell vereinbart – abgestimmt auf Öffnungszeiten, Risikofenster und besondere Anlässe an Ihrem Standort.",
     },
   ],
 };

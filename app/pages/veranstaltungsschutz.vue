@@ -22,9 +22,5 @@
 import { heroImages } from "~/content/hero-images";
 import { veranstaltungsschutzContent as content } from "~/content/services/veranstaltungsschutz";
 
-useHead({
-  title: content.seo.title,
-  meta: [{ name: "description", content: content.seo.description }],
-  htmlAttrs: { lang: "de" },
-});
+useServicePageSeo(content, "veranstaltungsschutz", heroImages.veranstaltungsschutz);
 </script>

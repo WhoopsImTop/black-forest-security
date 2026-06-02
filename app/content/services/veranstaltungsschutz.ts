@@ -2,27 +2,27 @@ import type { ServicePageContent } from "../types";
 
 export const veranstaltungsschutzContent: ServicePageContent = {
   seo: {
-    title: "Veranstaltungsschutz | Black Forest Security GmbH",
+    title: "Veranstaltungsschutz Freiburg | Black Forest Security GmbH",
     description:
-      "Professioneller Veranstaltungsschutz in Freiburg: individuelle Konzepte, Zugangskontrolle, Parkplatzservice und Notausgangsüberwachung.",
+      "Veranstaltungsschutz in Freiburg: Sicherheitskonzept, Zugangskontrolle, Parkplatzbetreuung und Notausgangsüberwachung für Events jeder Größe.",
   },
   title: "Veranstaltungsschutz",
-  lead: "Ihr individuelles Sicherheitskonzept – von der Konzeption bis zur Umsetzung.",
+  lead: "Veranstaltungsschutz in Freiburg und der Region – von der Konzeption bis zur Umsetzung an Ihrer Location.",
   sections: [
     {
       id: "konzept",
-      title: "Ihr individuelles Sicherheitskonzept",
+      title: "Sicherheitskonzept für Ihr Event",
       paragraphs: [
-        "Konzentrieren Sie sich voll und ganz auf Ihr Fachgebiet und vertrauen darauf, dass die Spezialisten von Black Forest Security Ihr persönliches und individuell angepasstes Sicherheitskonzept erstellen. Unsere umfangreiche Erfahrung im Bereich der Veranstaltungssicherheit sowie ein umfassendes Netzwerk in der gesamten Branche zeichnen uns aus.",
-        "Wir bieten professionelle Sicherheitslösungen, beginnend bei der Konzeption bis hin zur Umsetzung. Verlassen Sie sich auf unsere ganzheitlichen Dienstleistungen aus einer Hand.",
+        "Als Veranstalter in Freiburg oder der Region brauchen Sie einen Partner, der Zugänge, Besucherströme und Notfallabläufe professionell plant und umsetzt.",
+        "Wir erstellen ein Sicherheitskonzept, das zu Ihrer Location, Zielgruppe und behördlichen Anforderungen passt – inklusive Personaleinsatz und klarer Kommunikation mit Ihrem Team vor Ort.",
       ],
     },
     {
       id: "experte",
-      title: "Der Experte für professionelle Veranstaltungen",
+      title: "Erfahrung bei Events jeder Größe",
       paragraphs: [
-        "In Ihrer Rolle als Veranstalter stehen Sie vor zahlreichen Herausforderungen, die in den Zuständigkeitsbereich Ihres Sicherheitsdienstes fallen. Daher ist es entscheidend, einen robusten und zuverlässigen Partner an Ihrer Seite zu haben, dem Sie voll und ganz vertrauen können.",
-        "Mit langjähriger Erfahrung als Dienstleister für Veranstaltungen, sowohl bei großen als auch kleinen Events, sind wir bestens in den Bereichen Behörden und Branche vernetzt. Wir kümmern uns engagiert um alle Sicherheitsbelange, die Ihre Veranstaltung betreffen.",
+        "Ob Firmenfeier, Stadtfest oder Konzert: Unser Team kennt die Abläufe mit Behörden, Veranstaltern und Location-Management.",
+        "Wir übernehmen die operativen Sicherheitsaufgaben, damit Sie sich auf Ihr Event konzentrieren können.",
       ],
     },
   ],
@@ -30,17 +30,17 @@ export const veranstaltungsschutzContent: ServicePageContent = {
     {
       title: "Zugangskontrolle",
       description:
-        "Unsere Mitarbeiter, speziell im Umgang mit Ihren Gästen geschult, übernehmen die Betreuung Ihres Eingangsbereichs. Bei Bedarf bieten wir auch technische Unterstützung an, immer diskret und in Übereinstimmung mit geltenden Gesetzen.",
+        "Geschultes Personal am Eingang – inklusive technischer Unterstützung nach Bedarf, diskret und rechtskonform.",
     },
     {
       title: "Parkplatzservice",
       description:
-        "Wir kümmern uns darum, die An- und Abreise Ihrer Gäste so angenehm wie möglich zu gestalten, indem wir den Parkplatz des Veranstaltungsortes betreuen.",
+        "Geordnete An- und Abreise Ihrer Gäste durch Betreuung der Parkflächen am Veranstaltungsort.",
     },
     {
       title: "Notausgangsüberwachung",
       description:
-        "Um stets ein Höchstmaß an Sicherheit für Sie und Ihre Gäste zu gewährleisten, legen wir während der Veranstaltung besonderen Wert auf die Überwachung der vorgeschriebenen Notausgänge.",
+        "Kontinuierliche Überwachung der vorgeschriebenen Notausgänge während der gesamten Veranstaltung.",
     },
   ],
 };

@@ -4,22 +4,38 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
-  ssr: false,
-  modules: ["@pinia/nuxt"],
+  ssr: true,
+  modules: ["@pinia/nuxt", "@nuxtjs/sitemap"],
+  site: {
+    url: "https://www.black-forest-security.de",
+    name: "Black Forest Security GmbH",
+  },
   runtimeConfig: {
     public: {
+      siteUrl: "https://www.black-forest-security.de",
       chatWebhookUrl:
         "https://simpleki.app.n8n.cloud/webhook/aee67d8e-647f-45a2-8737-bc9aee00544a/chat",
     },
   },
+  sitemap: {
+    exclude: ["/404"],
+  },
   experimental: {
     scanPageMeta: true,
+  },
+  nitro: {
+    preset: "static", // ← das ist der entscheidende Punkt bei Nuxt 4
+    prerender: {
+      crawlLinks: true,
+    },
+  },
+  routeRules: {
+    "/": { prerender: true },
   },
 
   //import font
   app: {
     head: {
-      title: "Black Forest Security GmbH - Ihr Partner für Sicherheit und Schutz",
       meta: [
         {
           charset: "utf-8",
@@ -27,11 +43,6 @@ export default defineNuxtConfig({
         {
           name: "viewport",
           content: "width=device-width, initial-scale=1",
-        },
-        {
-          name: "description",
-          content:
-            "Black Forest Security GmbH - Ihr Partner für Sicherheit und Schutz. Professionelle Sicherheitsdienste, umfassende Schutzmaßnahmen und umweltverträgliche Lösungen.",
         },
       ],
       link: [

@@ -5,6 +5,11 @@
       title="Über uns"
       lead="Erfahrenes Team, klare Prozesse, höchster Anspruch an Sicherheit."
     />
+    <SectionsContentSection
+      :title="ueberUnsIntro.title"
+      :paragraphs="ueberUnsIntro.paragraphs"
+      centered
+    />
     <SectionsTeamGrid :members="teamMembers" />
     <SectionsCtaBand />
   </div>
@@ -12,11 +17,20 @@
 
 <script setup>
 import { heroImages } from "~/content/hero-images";
-import { teamMembers, ueberUnsSeo } from "~/content/team";
+import { teamMembers, ueberUnsIntro, ueberUnsSeo } from "~/content/team";
 
-useHead({
+import { buildBreadcrumbSchema, toJsonLdGraph } from "~/utils/seo/schema";
+
+usePageSeo({
   title: ueberUnsSeo.title,
-  meta: [{ name: "description", content: ueberUnsSeo.description }],
-  htmlAttrs: { lang: "de" },
+  description: ueberUnsSeo.description,
+  path: "/ueber-uns",
+  ogImage: heroImages.ueberUns,
+  jsonLd: toJsonLdGraph([
+    buildBreadcrumbSchema([
+      { name: "Startseite", path: "/" },
+      { name: "Über uns", path: "/ueber-uns" },
+    ]),
+  ]),
 });
 </script>

@@ -2,26 +2,26 @@ import type { ServicePageContent } from "../types";
 
 export const tuersteherContent: ServicePageContent = {
   seo: {
-    title: "Türsteher | Black Forest Security GmbH",
+    title: "Türsteher Freiburg | Black Forest Security GmbH",
     description:
-      "Professionelle Türsteher für sichere Veranstaltungen: organisierter Einlass, Gästelistenkontrolle und Störungsmanagement.",
+      "Türsteher in Freiburg für Clubs, Events und Locations: Einlasskontrolle, Gästelisten, Deeskalation und professionelles Störungsmanagement.",
   },
   title: "Professionelle Türsteher",
-  lead: "Für sichere Veranstaltungen – reibungsloser Einlass und umfassende Sicherheit für Ihre Gäste.",
+  lead: "Türsteherdienst in Freiburg und Umgebung – sicherer Einlass, klare Regeln und professionelles Auftreten für Ihre Gäste.",
   sections: [
     {
       id: "intro",
       paragraphs: [
-        "Betreiben Sie eine Veranstaltung oder einen Veranstaltungsort? Die Sicherheit Ihrer Gäste steht an erster Stelle. Unsere professionellen Türsteher garantieren nicht nur einen reibungslosen Einlass, sondern bieten auch eine umfassende Sicherheitslösung für Ihr Event.",
-        "Wir überprüfen sorgfältig die Gästeliste, verhindern unerwünschten Zutritt und halten potenzielle Störungen im Zaum, damit Ihre Veranstaltung reibungslos verläuft.",
+        "Türsteher in Freiburg und der Region sichern den Einlass Ihrer Veranstaltung: Gästelisten werden geprüft, unbefugter Zutritt verhindert und Konflikte früh deeskaliert.",
+        "Unser Team ist auf Events, Clubs und geschlossene Gesellschaften spezialisiert und arbeitet mit Ihnen abgestimmten Einlassregeln.",
       ],
     },
     {
       id: "warum",
-      title: "Warum unsere Türsteher die beste Wahl sind",
+      title: "Was unsere Türsteher auszeichnet",
       paragraphs: [
-        "Mit unseren professionellen Türstehern können Sie sich darauf verlassen, dass Ihre Veranstaltung nicht nur sicher, sondern auch angenehm für alle Teilnehmer ist. Wir setzen auf geschultes Personal und modernste Sicherheitsprotokolle, um höchste Standards zu gewährleisten.",
-        "Kontaktieren Sie uns für maßgeschneiderte Sicherheitslösungen, die perfekt zu den Anforderungen Ihrer Veranstaltung passen.",
+        "Geschultes Personal, einheitliche Abläufe und erfahrene Teamleiter vor Ort sorgen für einen geordneten Veranstaltungsablauf.",
+        "Sprechen Sie uns an – wir planen Personaleinsatz und Einlasskonzept passend zu Ihrer Location.",
       ],
     },
   ],
@@ -29,22 +29,22 @@ export const tuersteherContent: ServicePageContent = {
     {
       title: "Reibungsloser Einlass",
       description:
-        "Unsere Türsteher gewährleisten einen organisierten und effizienten Einlass, um einen geordneten Ablauf Ihrer Veranstaltung zu sichern.",
+        "Organisierter und effizienter Einlass für einen geordneten Veranstaltungsstart.",
     },
     {
       title: "Gästelistenüberprüfung",
       description:
-        "Wir überprüfen sorgfältig die Gästeliste, um sicherzustellen, dass nur autorisierte Personen Zugang erhalten.",
+        "Prüfung der Gästeliste, damit nur autorisierte Personen Zutritt erhalten.",
     },
     {
       title: "Prävention von unerwünschtem Zutritt",
       description:
-        "Unsere Türsteher sind darauf geschult, unerwünschten Zutritt zu verhindern und die Sicherheit Ihrer Veranstaltungsteilnehmer zu gewährleisten.",
+        "Konsequente Zutrittskontrolle zum Schutz Ihrer Gäste und Ihres Konzepts.",
     },
     {
       title: "Störungsmanagement",
       description:
-        "Bei potenziellen Störungen agieren unsere Türsteher sofort, um eine sichere und angenehme Atmosphäre für alle Teilnehmer zu gewährleisten.",
+        "Schnelles, deeskalierendes Handeln bei Störungen – professionell und zurückhaltend.",
     },
   ],
 };

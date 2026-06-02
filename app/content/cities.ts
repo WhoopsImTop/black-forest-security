@@ -8,14 +8,14 @@ export const cityPages: CityPageContent[] = [
     seo: {
       title: "Sicherheitsdienst in Freiburg | Black Forest Security GmbH",
       description:
-        "Veranstaltungsschutz, Objektschutz und Revierdienste in Freiburg. Regionales Sicherheitsteam mit schnellen Reaktionszeiten.",
+        "Sicherheitsdienst Freiburg: Objektschutz, Veranstaltungsschutz, Türsteher und Revierdienst – regionales Team mit kurzen Reaktionszeiten.",
     },
     heroTitle: "Sicherheitsdienst in Freiburg",
     heroLead:
       "Professionelle Sicherheitskonzepte für Unternehmen, Veranstaltungen, Wohnanlagen und Baustellen in Freiburg sowie den angrenzenden Stadtteilen.",
     trustTitle: "Regional vor Ort in Freiburg",
     trustParagraphs: [
-      "Von der Altstadt über das Industriegebiet Nord bis in stark frequentierte Quartiere begleiten wir unsere Kunden mit festen Ansprechpartnern und klaren Einsatzabläufen.",
+      "Als Sicherheitsdienst in Freiburg begleiten wir Sie von der Altstadt über das Industriegebiet Nord bis in stark frequentierte Quartiere – mit festen Ansprechpartnern und klaren Einsatzabläufen.",
       "Durch kurze Wege, regionale Ortskenntnis und eingespielte Prozesse können wir in Freiburg sehr schnell auf neue Lagen reagieren und Maßnahmen direkt nachschärfen.",
       "Gerade bei gemischten Standorten mit Publikumsverkehr profitieren unsere Auftraggeber von einem Sicherheitsdienst, der präventiv arbeitet und trotzdem jederzeit handlungsfähig bleibt.",
     ],
@@ -70,14 +70,14 @@ export const cityPages: CityPageContent[] = [
     seo: {
       title: "Sicherheitsdienst in Offenburg | Black Forest Security GmbH",
       description:
-        "Sicherheitsdienst für Offenburg: Objektschutz, Veranstaltungsschutz und Streifendienst mit regionaler Einsatzplanung und klaren Reaktionswegen.",
+        "Sicherheitsdienst Offenburg: Objektschutz, Veranstaltungsschutz und Streifendienst – regionale Einsatzplanung und klare Reaktionswege.",
     },
     heroTitle: "Sicherheitsdienst in Offenburg",
     heroLead:
       "Zuverlässige Sicherheitsleistungen für Unternehmen, Events und Baustellen in Offenburg und Umgebung.",
     trustTitle: "Sicherheitspartner für die Ortenau",
     trustParagraphs: [
-      "In Offenburg unterstützen wir Unternehmen, Veranstalter und Eigentümer mit transparenten Sicherheitskonzepten, die sich an realen Betriebsabläufen orientieren.",
+      "Unser Sicherheitsdienst in Offenburg unterstützt Unternehmen, Veranstalter und Eigentümer mit transparenten Konzepten, die sich an realen Betriebsabläufen orientieren.",
       "Unsere Einsatzplanung ist auf lokale Anforderungen, kurze Kommunikationswege und eine verlässliche Präsenz im Tages- und Abendgeschäft ausgelegt.",
       "Dadurch schaffen wir in Offenburg Sicherheit, die nicht nur reaktiv funktioniert, sondern bereits im Vorfeld Risiken reduziert.",
     ],
@@ -127,14 +127,14 @@ export const cityPages: CityPageContent[] = [
     seo: {
       title: "Sicherheitsdienst in Emmendingen | Black Forest Security GmbH",
       description:
-        "Lokaler Sicherheitsdienst in Emmendingen für Objekte, Events und Baustellen mit verlässlicher Einsatzkoordination und klarer Dokumentation.",
+        "Sicherheitsdienst Emmendingen: Objektschutz, Veranstaltungsschutz und Baustellenüberwachung mit verlässlicher Einsatzkoordination.",
     },
     heroTitle: "Sicherheitsdienst in Emmendingen",
     heroLead:
       "Präsente Sicherheitskräfte und klare Prozesse für Unternehmen und Veranstalter in Emmendingen.",
     trustTitle: "Regional erreichbar in Emmendingen",
     trustParagraphs: [
-      "Wir arbeiten mit festen Kontaktpersonen und stimmen Einsätze direkt auf Ihren Standort in Emmendingen ab.",
+      "Als Sicherheitsdienst in Emmendingen arbeiten wir mit festen Kontaktpersonen und stimmen Einsätze direkt auf Ihren Standort ab.",
       "So bleiben Entscheidungswege kurz und Maßnahmen im Alltag verlässlich.",
       "Unser Anspruch ist eine Sicherheitslösung, die für Mitarbeitende, Kunden und Besucher nachvollziehbar wirkt und im Hintergrund stabil funktioniert.",
     ],
@@ -184,14 +184,14 @@ export const cityPages: CityPageContent[] = [
     seo: {
       title: "Sicherheitsdienst in Lörrach | Black Forest Security GmbH",
       description:
-        "Sicherheitsdienst in Lörrach für Unternehmen und Events: Revierdienst, Objektschutz und Zutrittskontrolle aus einer Hand.",
+        "Sicherheitsdienst Lörrach: Objektschutz, Veranstaltungsschutz und Revierdienst für Unternehmen und Events im Dreiländereck.",
     },
     heroTitle: "Sicherheitsdienst in Lörrach",
     heroLead:
       "Individuelle Sicherheitskonzepte für Standorte, Veranstaltungen und temporäre Projekte im Raum Lörrach.",
     trustTitle: "Sicherheitskonzepte für das Dreiländereck",
     trustParagraphs: [
-      "Im Raum Lörrach verbinden wir präventive Präsenz mit klaren Eskalationswegen und enger Abstimmung mit den Verantwortlichen vor Ort.",
+      "Unser Sicherheitsdienst in Lörrach verbindet präventive Präsenz mit klaren Eskalationswegen und enger Abstimmung mit Verantwortlichen vor Ort.",
       "Damit bleiben Ihre Abläufe planbar, Ihre Teams entlastet und Ihre Besucher in professionell gesicherten Strukturen.",
       "Gerade im Dreiländereck profitieren Auftraggeber von einem Sicherheitsdienst, der flexibel auf unterschiedliche Anforderungen reagieren kann.",
     ],
@@ -241,14 +241,14 @@ export const cityPages: CityPageContent[] = [
     seo: {
       title: "Sicherheitsdienst in Weil am Rhein | Black Forest Security GmbH",
       description:
-        "Sicherheitsdienst für Weil am Rhein: Objektkontrollen, Revierdienste und Veranstaltungsschutz mit regionalem Team.",
+        "Sicherheitsdienst Weil am Rhein: Objektschutz, Revierdienst und Veranstaltungsschutz mit regionalem Team im Grenzraum.",
     },
     heroTitle: "Sicherheitsdienst in Weil am Rhein",
     heroLead:
       "Schnelle und professionelle Sicherheitsleistungen für Gewerbe, Veranstaltungen und Bauprojekte in Weil am Rhein.",
     trustTitle: "Nah dran in Weil am Rhein",
     trustParagraphs: [
-      "Wir kennen die Anforderungen im Grenzraum und setzen auf präzise Einsatzabstimmung.",
+      "Als Sicherheitsdienst in Weil am Rhein kennen wir die Anforderungen im Grenzraum und setzen auf präzise Einsatzabstimmung.",
       "So schaffen wir verlässliche Sicherheit im laufenden Betrieb.",
       "Unternehmen in Weil am Rhein profitieren von einer Sicherheitsstruktur, die operative Stabilität, klare Meldelinien und nachvollziehbare Qualität verbindet.",
     ],
@@ -298,14 +298,14 @@ export const cityPages: CityPageContent[] = [
     seo: {
       title: "Sicherheitsdienst in Bad Krozingen | Black Forest Security GmbH",
       description:
-        "Professioneller Sicherheitsdienst in Bad Krozingen für Objektschutz, Veranstaltungen und mobile Kontrolldienste.",
+        "Sicherheitsdienst Bad Krozingen: Objektschutz, Veranstaltungsschutz und mobile Revierfahrten mit klaren Einsatzstandards.",
     },
     heroTitle: "Sicherheitsdienst in Bad Krozingen",
     heroLead:
       "Sicherheitskonzepte für Hotels, Gewerbeflächen, Veranstaltungen und Baustellen in Bad Krozingen.",
     trustTitle: "Strukturierte Einsätze im Markgräflerland",
     trustParagraphs: [
-      "Wir planen Einsätze in Bad Krozingen mit klaren Schicht- und Kommunikationsstandards.",
+      "Unser Sicherheitsdienst in Bad Krozingen plant Einsätze mit klaren Schicht- und Kommunikationsstandards.",
       "Dadurch bleiben Reaktionszeiten kurz und Verantwortlichkeiten eindeutig.",
       "Unsere Sicherheitskräfte arbeiten dabei vorausschauend, um Risiken frühzeitig zu erkennen und Störungen aktiv zu vermeiden.",
     ],
@@ -355,14 +355,14 @@ export const cityPages: CityPageContent[] = [
     seo: {
       title: "Sicherheitsdienst in Waldkirch | Black Forest Security GmbH",
       description:
-        "Sicherheitsdienst in Waldkirch für Unternehmen, Veranstaltungen und Baustellen mit lokal abgestimmter Einsatzplanung.",
+        "Sicherheitsdienst Waldkirch: Objektschutz, Veranstaltungsschutz und Baustellenüberwachung mit lokaler Einsatzplanung.",
     },
     heroTitle: "Sicherheitsdienst in Waldkirch",
     heroLead:
       "Verlässliche Sicherheitsdienste für Waldkirch mit Fokus auf Prävention und klare Einsatzkommunikation.",
     trustTitle: "Sicherheitspartner im Elztal",
     trustParagraphs: [
-      "Unsere Teams unterstützen Sie bei dauerhaften Sicherheitsaufgaben und kurzfristigen Einsätzen.",
+      "Als Sicherheitsdienst in Waldkirch unterstützen unsere Teams Sie bei dauerhaften Aufgaben und kurzfristigen Einsätzen.",
       "Dabei legen wir Wert auf dokumentierte Prozesse und feste Ansprechpartner.",
       "So entsteht ein Sicherheitsniveau, das sich im Tagesgeschäft belastbar bewährt und in Ausnahmesituationen tragfähig bleibt.",
     ],
@@ -412,14 +412,14 @@ export const cityPages: CityPageContent[] = [
     seo: {
       title: "Sicherheitsdienst in Titisee-Neustadt | Black Forest Security GmbH",
       description:
-        "Sicherheitsdienst in Titisee-Neustadt mit Fokus auf Veranstaltungsschutz, Objektschutz und flexible Revierdienste.",
+        "Sicherheitsdienst Titisee-Neustadt: Veranstaltungsschutz, Objektschutz und flexible Revierdienste – auch in der Hochsaison.",
     },
     heroTitle: "Sicherheitsdienst in Titisee-Neustadt",
     heroLead:
       "Sicherheitsleistungen für Tourismus, Events und Gewerbe im Hochschwarzwald – professionell, regional und planbar.",
     trustTitle: "Sicherheit im Hochschwarzwald",
     trustParagraphs: [
-      "Für Titisee-Neustadt setzen wir auf flexible Einsatzpläne, die saisonale Spitzen berücksichtigen.",
+      "Unser Sicherheitsdienst in Titisee-Neustadt setzt auf flexible Einsatzpläne, die saisonale Spitzen berücksichtigen.",
       "So bleibt Ihr Standort auch bei hoher Frequenz sicher organisiert.",
       "Mit regionaler Einsatzkoordination und klaren Standards sichern wir auch wechselnde Anforderungen im touristisch geprägten Umfeld zuverlässig ab.",
     ],

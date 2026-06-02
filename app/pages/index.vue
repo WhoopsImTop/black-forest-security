@@ -64,10 +64,14 @@ import {
   landingTrust,
 } from "~/content/landing";
 
-useHead({
+import { buildWebSiteSchema, toJsonLdGraph } from "~/utils/seo/schema";
+
+usePageSeo({
   title: landingSeo.title,
-  meta: [{ name: "description", content: landingSeo.description }],
-  htmlAttrs: { lang: "de" },
+  description: landingSeo.description,
+  path: "/",
+  ogImage: heroImages.home,
+  jsonLd: toJsonLdGraph([buildWebSiteSchema()]),
 });
 
 const trustRef = ref(null);

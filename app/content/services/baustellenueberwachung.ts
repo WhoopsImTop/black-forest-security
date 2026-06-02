@@ -2,26 +2,26 @@ import type { ServicePageContent } from "../types";
 
 export const baustellenueberwachungContent: ServicePageContent = {
   seo: {
-    title: "Baustellenüberwachung | Black Forest Security GmbH",
+    title: "Baustellenüberwachung Freiburg | Black Forest Security GmbH",
     description:
-      "Spezialisierte Baustellenüberwachung: Patrouillen, Zugangskontrolle, Besucherkontrolle und sofortige Reaktion bei verdächtigen Aktivitäten.",
+      "Baustellenüberwachung in Freiburg: Patrouillen, Zugangskontrolle und schnelle Reaktion bei Diebstahl und Vandalismus auf der Baustelle.",
   },
   title: "Baustellenüberwachung",
-  lead: "Schutz vor Diebstahl, Vandalismus und unbefugtem Zutritt – damit Sie sich auf Ihr Bauprojekt konzentrieren können.",
+  lead: "Baustellenüberwachung in Freiburg und der Region – Schutz vor Diebstahl, Vandalismus und unbefugtem Zutritt.",
   sections: [
     {
       id: "intro",
       paragraphs: [
-        "Baustellen stellen oft ein attraktives Ziel für Diebstahl, Vandalismus und unbefugten Zutritt dar. Mit unserem spezialisierten Baustellenüberwachungsdienst bieten wir Ihnen die Sicherheitslösungen, die Ihr Bauprojekt benötigt.",
-        "Unsere hochqualifizierten Sicherheitskräfte führen regelmäßige Patrouillen auf Ihrer Baustelle durch, um den Zugang zu überwachen, Besucher zu kontrollieren und sofort auf verdächtige Aktivitäten zu reagieren.",
+        "Baustellenüberwachung in Freiburg und Umgebung schützt Material, Maschinen und das Gelände vor Diebstahl, Vandalismus und unbefugtem Zutritt.",
+        "Unsere Sicherheitskräfte führen Patrouillen nach festem Plan durch, kontrollieren Zugänge und reagieren sofort auf Auffälligkeiten.",
       ],
     },
     {
       id: "warum",
-      title: "Warum unsere Baustellenüberwachung die beste Wahl ist",
+      title: "Sicherheit für Ihr Bauprojekt",
       paragraphs: [
-        "Unsere maßgeschneiderten Sicherheitslösungen ermöglichen es Ihnen, sich voll und ganz auf den Fortschritt Ihres Bauprojekts zu konzentrieren, während wir die Sicherheit Ihrer Baustelle gewährleisten.",
-        "Vertrauen Sie auf unsere Expertise, um die Sicherheit Ihrer Baustelle zu maximieren und potenzielle Risiken zu minimieren.",
+        "Sie konzentrieren sich auf den Baufortschritt – wir übernehmen die Sicherheit mit dokumentierten Kontrollgängen und klaren Meldewegen.",
+        "Einsatzzeiten und Schwerpunkte stimmen wir mit Ihrer Bauleitung ab.",
       ],
     },
   ],
@@ -29,22 +29,22 @@ export const baustellenueberwachungContent: ServicePageContent = {
     {
       title: "Regelmäßige Patrouillen",
       description:
-        "Unsere Sicherheitskräfte patrouillieren in festgelegten Intervallen auf Ihrer Baustelle, um eine konstante Überwachung sicherzustellen.",
+        "Kontrollgänge in festgelegten Intervallen für durchgängige Überwachung der Baustelle.",
     },
     {
       title: "Zugangskontrolle",
       description:
-        "Wir überwachen und kontrollieren den Zugang zur Baustelle, um sicherzustellen, dass nur autorisierte Personen das Gelände betreten.",
+        "Nur autorisierte Personen erhalten Zutritt – inklusive Dokumentation bei Bedarf.",
     },
     {
       title: "Besucherkontrolle",
       description:
-        "Unsere Sicherheitskräfte überprüfen alle Besucher auf ihre Berechtigung und sorgen so für eine sichere Arbeitsumgebung.",
+        "Prüfung aller Besucher für eine sichere Arbeitsumgebung auf dem Gelände.",
     },
     {
       title: "Sofortige Reaktion",
       description:
-        "Bei identifizierten verdächtigen Aktivitäten reagieren wir sofort, um potenzielle Sicherheitsrisiken zu minimieren.",
+        "Direktes Handeln bei verdächtigen Aktivitäten und Meldung an Verantwortliche.",
     },
   ],
 };

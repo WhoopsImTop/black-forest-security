@@ -12,9 +12,9 @@
 <script setup>
 import { datenschutzContent } from "~/content/legal/datenschutz";
 
-useHead({
+usePageSeo({
   title: datenschutzContent.seo.title,
-  meta: [{ name: "description", content: datenschutzContent.seo.description }],
-  htmlAttrs: { lang: "de" },
+  description: datenschutzContent.seo.description,
+  path: "/datenschutzerklaerung",
 });
 </script>

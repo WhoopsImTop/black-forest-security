@@ -9,8 +9,8 @@
     <section class="bg-white">
       <div class="container mx-auto px-4 section-pad">
         <UiSectionHeading
-          title="Unsere Stadtseiten"
-          lead="Wählen Sie Ihren Standort und erfahren Sie mehr zu unseren Leistungen vor Ort."
+          :title="standorteIntro.title"
+          :lead="standorteIntro.lead"
         />
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <NuxtLink
@@ -38,20 +38,23 @@
 <script setup>
 import { cityPages, cityPilotSlugs } from "~/content/cities";
 import { heroImages } from "~/content/hero-images";
+import { standorteIntro, standorteSeo } from "~/content/standorte-seo";
+import { buildBreadcrumbSchema, toJsonLdGraph } from "~/utils/seo/schema";
 
 const pilotCities = computed(() =>
   cityPages.filter((city) => cityPilotSlugs.includes(city.slug)),
 );
 
-useHead({
-  title: "Standorte | Black Forest Security GmbH",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Standortseiten für Sicherheitsdienstleistungen in Freiburg und Umgebung.",
-    },
-  ],
-  htmlAttrs: { lang: "de" },
+usePageSeo({
+  title: standorteSeo.title,
+  description: standorteSeo.description,
+  path: "/standorte",
+  ogImage: heroImages.karriere,
+  jsonLd: toJsonLdGraph([
+    buildBreadcrumbSchema([
+      { name: "Startseite", path: "/" },
+      { name: "Standorte", path: "/standorte" },
+    ]),
+  ]),
 });
 </script>

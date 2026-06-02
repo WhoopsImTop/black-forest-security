@@ -1,7 +1,7 @@
 <template>
   <footer class="border-t border-neutral-900 bg-black">
     <div class="container mx-auto px-4 py-16 sm:py-20">
-      <div class="grid gap-14 md:grid-cols-2 xl:grid-cols-4">
+      <div class="grid gap-14 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         <section>
           <p class="font-heading text-sm font-bold text-white">Black Forest Security GmbH</p>
           <p class="max-w-xs text-sm text-neutral-400">
@@ -23,6 +23,16 @@
           </div>
         </section>
         
+        <section>
+          <div class="space-y-3 text-sm text-white">
+            <NuxtLink to="/veranstaltungsschutz" class="block hover:text-white">Veranstaltungsschutz</NuxtLink>
+            <NuxtLink to="/objektschutz" class="block hover:text-white">Objektschutz</NuxtLink>
+            <NuxtLink to="/tuersteher" class="block hover:text-white">Türsteher</NuxtLink>
+            <NuxtLink to="/baustellenueberwachung" class="block hover:text-white">Baustellenüberwachung</NuxtLink>
+            <NuxtLink to="/streifen-und-revierdienst" class="block hover:text-white">Streifen- und Revierdienst</NuxtLink>
+          </div>
+        </section>
+
         <section>
           <div class="space-y-3 text-sm text-white">
             <NuxtLink to="/standorte" class="block hover:text-white">Standorte</NuxtLink>

@@ -22,9 +22,5 @@
 import { heroImages } from "~/content/hero-images";
 import { baustellenueberwachungContent as content } from "~/content/services/baustellenueberwachung";
 
-useHead({
-  title: content.seo.title,
-  meta: [{ name: "description", content: content.seo.description }],
-  htmlAttrs: { lang: "de" },
-});
+useServicePageSeo(content, "baustellenueberwachung", heroImages.baustellenueberwachung);
 </script>

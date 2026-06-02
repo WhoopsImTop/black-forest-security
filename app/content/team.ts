@@ -3,7 +3,16 @@ import type { SeoMeta, TeamMember } from "./types";
 export const ueberUnsSeo: SeoMeta = {
   title: "Über uns | Black Forest Security GmbH",
   description:
-    "Das Team der Black Forest Security GmbH in Freiburg – erfahrene Fachkräfte für professionelle Sicherheitsdienstleistungen.",
+    "Black Forest Security GmbH in Freiburg: erfahrenes Sicherheitsteam mit rund 68 Mitarbeitern für professionelle Schutzdienstleistungen in der Region.",
+};
+
+export const ueberUnsIntro = {
+  title: "Ihr Sicherheitspartner in Freiburg",
+  paragraphs: [
+    "Die Black Forest Security GmbH hat ihren Sitz in Freiburg im Breisgau und betreut Kunden in der gesamten Region – von der Ortenau bis zum Hochschwarzwald.",
+    "Mit rund 68 Mitarbeitern und eingespielten Einsatzabläufen bieten wir Veranstaltungsschutz, Objektschutz, Türsteherdienste, Baustellenüberwachung und Streifen- und Revierdienst aus einer Hand.",
+    "Unser Anspruch: verlässliche Sicherheit, klare Kommunikation mit Auftraggebern und dokumentierte Prozesse, die zu Ihrem Objekt oder Event passen.",
+  ],
 };
 
 export const teamMembers: TeamMember[] = [

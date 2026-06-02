@@ -22,9 +22,9 @@
 import { heroImages } from "~/content/hero-images";
 import { streifenRevierdienstContent as content } from "~/content/services/streifen-und-revierdienst";
 
-useHead({
-  title: content.seo.title,
-  meta: [{ name: "description", content: content.seo.description }],
-  htmlAttrs: { lang: "de" },
-});
+useServicePageSeo(
+  content,
+  "streifen-und-revierdienst",
+  heroImages.streifenUndRevierdienst,
+);
 </script>

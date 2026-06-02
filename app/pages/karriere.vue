@@ -2,15 +2,12 @@
   <div>
     <SectionsPageHero
       :image="heroImages.karriere"
-      title="Karriere"
-      lead="Werden Sie Teil unseres Teams bei Black Forest Security."
+      :title="karriereContent.title"
+      :lead="karriereContent.lead"
     />
     <SectionsContentSection
-      title="Aktuell keine Stellenausschreibungen"
-      :paragraphs="[
-        'Derzeit haben wir keine offenen Positionen ausgeschrieben.',
-        'Wir freuen uns dennoch jederzeit über Ihre Initiativbewerbung.',
-      ]"
+      :title="karriereContent.sectionTitle"
+      :paragraphs="karriereContent.paragraphs"
       centered
     >
       <div class="mt-8">
@@ -23,16 +20,20 @@
 </template>
 
 <script setup>
+import { karriereContent, karriereSeo } from "~/content/karriere";
 import { heroImages } from "~/content/hero-images";
+import { buildBreadcrumbSchema, toJsonLdGraph } from "~/utils/seo/schema";
 
-useHead({
-  title: "Karriere | Black Forest Security GmbH",
-  meta: [
-    {
-      name: "description",
-      content: "Aktuell keine Stellenausschreibungen. Bewerben Sie sich initiativ bei der Black Forest Security GmbH.",
-    },
-  ],
-  htmlAttrs: { lang: "de" },
+usePageSeo({
+  title: karriereSeo.title,
+  description: karriereSeo.description,
+  path: "/karriere",
+  ogImage: heroImages.karriere,
+  jsonLd: toJsonLdGraph([
+    buildBreadcrumbSchema([
+      { name: "Startseite", path: "/" },
+      { name: "Karriere", path: "/karriere" },
+    ]),
+  ]),
 });
 </script>

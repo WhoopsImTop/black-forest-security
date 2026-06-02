@@ -12,9 +12,9 @@
 <script setup>
 import { impressumContent } from "~/content/legal/impressum";
 
-useHead({
+usePageSeo({
   title: impressumContent.seo.title,
-  meta: [{ name: "description", content: impressumContent.seo.description }],
-  htmlAttrs: { lang: "de" },
+  description: impressumContent.seo.description,
+  path: "/impressum",
 });
 </script>

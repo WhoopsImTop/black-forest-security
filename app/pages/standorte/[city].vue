@@ -71,24 +71,19 @@ const cityContent = computed(() =>
   cityPages.find((entry) => entry.slug === String(route.params.city || "")),
 );
 
-useHead(() => {
-  if (!cityContent.value) {
-    return {
-      title: "Standorte | Black Forest Security GmbH",
-      meta: [
-        {
-          name: "description",
-          content: "Standortseite nicht gefunden. Alle verfügbaren Standorte finden Sie in der Übersicht.",
-        },
-      ],
-      htmlAttrs: { lang: "de" },
-    };
+watchEffect(() => {
+  const city = cityContent.value;
+  if (city) {
+    useCityPageSeo(city, heroImages.ueberUns);
+    return;
   }
 
-  return {
-    title: cityContent.value.seo.title,
-    meta: [{ name: "description", content: cityContent.value.seo.description }],
-    htmlAttrs: { lang: "de" },
-  };
+  usePageSeo({
+    title: "Standort nicht gefunden | Black Forest Security GmbH",
+    description:
+      "Standortseite nicht gefunden. Alle verfügbaren Standorte finden Sie in der Übersicht.",
+    path: `/standorte/${String(route.params.city || "")}`,
+    robots: "noindex, follow",
+  });
 });
 </script>
