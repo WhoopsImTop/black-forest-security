@@ -1,48 +1,47 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, createError, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, getRequestProtocol, getRequestHost, setHeader, getQuery as getQuery$1, getHeader, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve as resolve$1, dirname, join } from 'node:path';
-import crypto$1 from 'node:crypto';
+import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { escapeHtml } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/@vue/shared/dist/shared.cjs.js';
-import viteNodeEntry_mjs from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs';
-import { viteNodeFetch } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/@nuxt/vite-builder/dist/vite-node.mjs';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, withBase, parsePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL, joinRelativeURL } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/ufo/dist/index.mjs';
-import destr, { destr as destr$1 } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/destr/dist/index.mjs';
-import { createHooks } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/nitropack/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, defineDriver, prefixStorage } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/unstorage/drivers/fs.mjs';
-import fsDriver from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/unstorage/drivers/fs-lite.mjs';
-import lruCache from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/unstorage/drivers/lru-cache.mjs';
-import { digest, hash as hash$1 } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/ohash/dist/index.mjs';
-import { klona } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/klona/dist/index.mjs';
-import defu, { defuFn, defu as defu$1, createDefu } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/defu/dist/defu.mjs';
-import { snakeCase } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/scule/dist/index.mjs';
-import { getContext } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/unctx/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, createError, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, getRequestProtocol, getRequestHost, setHeader, getQuery as getQuery$1, getHeader, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/h3/dist/index.mjs';
+import { escapeHtml } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/@vue/shared/dist/shared.cjs.js';
+import viteNodeEntry_mjs from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs';
+import { viteNodeFetch } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/@nuxt/vite-builder/dist/vite-node.mjs';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, withBase, parsePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL, joinRelativeURL } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/ufo/dist/index.mjs';
+import destr, { destr as destr$1 } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/destr/dist/index.mjs';
+import { renderToString } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/vue/server-renderer/index.mjs';
+import { klona } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/klona/dist/index.mjs';
+import defu, { defuFn, defu as defu$1, createDefu } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/defu/dist/defu.mjs';
+import { snakeCase } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/scule/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/unhead/dist/server.mjs';
+import { stringify, uneval } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/devalue/index.js';
+import { toValue, isVNode, isRef } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/vue/index.mjs';
+import { createHooks } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/nitropack/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/unstorage/drivers/fs.mjs';
+import file_58_47_47_47C_58_47Users_47info_47Documents_47Repositories_47black_45forest_45security_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js';
+import { digest, hash as hash$1 } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/ohash/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { createConsola, consola as consola$1 } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/youch-core/build/index.js';
-import { Youch } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/source-map/source-map.js';
-import devalue from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { toValue, isVNode, isRef } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/vue/index.mjs';
+import consola, { createConsola, consola as consola$1 } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/youch-core/build/index.js';
+import { Youch } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/source-map/source-map.js';
+import devalue from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/@nuxt/devalue/dist/devalue.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { stringify, uneval } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/devalue/index.js';
-import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/errx/dist/index.js';
-import _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/@nuxt/vite-builder/dist/fix-stacktrace.mjs';
+import { getContext } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/errx/dist/index.js';
+import _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/@nuxt/vite-builder/dist/fix-stacktrace.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$2 } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/pathe/dist/index.mjs';
-import { createFilter } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/nuxtseo-shared/dist/utils.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/unhead/dist/server.mjs';
-import { renderToString } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/vue/server-renderer/index.mjs';
-import { walkResolver } from 'file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/unhead/dist/utils.mjs';
+import { dirname as dirname$1, resolve as resolve$2 } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/pathe/dist/index.mjs';
+import { createFilter } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/nuxtseo-shared/dist/utils.mjs';
+import { walkResolver } from 'file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/unhead/dist/utils.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"/Users/eliasenglen/Documents/Repositories/black-forest-security/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/Users/info/Documents/Repositories/black-forest-security/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -50,55 +49,16 @@ for (const asset of serverAssets) {
   assets$1.mount(asset.baseName, unstorage_47drivers_47fs({ base: asset.dir, ignore: (asset?.ignore || []) }));
 }
 
-// @ts-check
-
-
-/**
- * @param {string} item
- */
-function normalizeFsKey (item) {
-  const safe = item.replace(/[^\w.-]/g, '_');
-  const prefix = safe.slice(0, 20);
-  const hash = crypto$1.createHash('sha256').update(item).digest('hex');
-  return `${prefix}-${hash}`
-}
-
-const _47Users_47eliasenglen_47Documents_47Repositories_47black_45forest_45security_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js = defineDriver(
-  /**
-   * @param {{ base?: string }} opts
-   */
-  (opts) => {
-    const fs = fsDriver({ base: opts.base });
-    const lru = lruCache({ max: 1000 });
-
-    return {
-      ...fs, // fall back to file system - only the bottom three methods are used in renderer
-      async setItem (key, value, opts) {
-        await Promise.all([
-          fs.setItem?.(normalizeFsKey(key), value, opts),
-          lru.setItem?.(key, value, opts),
-        ]);
-      },
-      async hasItem (key, opts) {
-        return await lru.hasItem(key, opts) || await fs.hasItem(normalizeFsKey(key), opts)
-      },
-      async getItem (key, opts) {
-        return await lru.getItem(key, opts) || await fs.getItem(normalizeFsKey(key), opts)
-      },
-    }
-  },
-);
-
 const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/eliasenglen/Documents/Repositories/black-forest-security","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/eliasenglen/Documents/Repositories/black-forest-security/server","watchOptions":{"ignored":[null]}}));
-storage.mount('cache:nuxt:payload', _47Users_47eliasenglen_47Documents_47Repositories_47black_45forest_45security_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js({"driver":"/Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js","base":"/Users/eliasenglen/Documents/Repositories/black-forest-security/.nuxt/cache/nuxt/payload"}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/eliasenglen/Documents/Repositories/black-forest-security/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/eliasenglen/Documents/Repositories/black-forest-security/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/eliasenglen/Documents/Repositories/black-forest-security/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/info/Documents/Repositories/black-forest-security","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/info/Documents/Repositories/black-forest-security/server","watchOptions":{"ignored":[null]}}));
+storage.mount('cache:nuxt:payload', file_58_47_47_47C_58_47Users_47info_47Documents_47Repositories_47black_45forest_45security_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js({"driver":"file:///C:/Users/info/Documents/Repositories/black-forest-security/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js","base":"C:/Users/info/Documents/Repositories/black-forest-security/.nuxt/cache/nuxt/payload"}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/info/Documents/Repositories/black-forest-security/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/info/Documents/Repositories/black-forest-security/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/Users/info/Documents/Repositories/black-forest-security/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -688,7 +648,7 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-06-02T06:37:34.210Z"
+          "X-Sitemap-Prerendered": "2026-06-03T16:25:48.064Z"
         }
       },
       "/_nuxt/builds/meta/**": {
@@ -776,11 +736,6 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
     }
     return void 0;
   }
-});
-
-getContext("nitro-app", {
-  asyncContext: false,
-  AsyncLocalStorage: void 0
 });
 
 function isPathInScope(pathname, base) {
@@ -2128,7 +2083,7 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const __T9eswST1BKXMq1tP2SkqX7u0dhQwlHE5F2L_cRRiU = (function(nitro) {
+const _NI0DxSNNnrS4_GSJ5eJIwbL2h6gDAVLigkw3fzHAcvw = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
@@ -2234,7 +2189,7 @@ function getSiteConfig(e, _options) {
   return e.context.siteConfig.get(options);
 }
 
-const _rylfuaRjJy4LRlEJX390o0yeB5nIdvz90aGrCN4qzbw = defineNitroPlugin(async (nitroApp) => {
+const _jLJkznUR2cQtl4RFa1hzEEgd3YkOucD1_pIIut6AeZM = defineNitroPlugin(async (nitroApp) => {
   nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
     const routeOptions = getRouteRules(event);
     const isIsland = process.env.NUXT_COMPONENT_ISLANDS && event.path.startsWith("/__nuxt_island");
@@ -2249,7 +2204,7 @@ const _rylfuaRjJy4LRlEJX390o0yeB5nIdvz90aGrCN4qzbw = defineNitroPlugin(async (ni
   });
 });
 
-const rootDir = "/Users/eliasenglen/Documents/Repositories/black-forest-security";
+const rootDir = "C:/Users/info/Documents/Repositories/black-forest-security";
 
 const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"stylesheet","href":"https://use.typekit.net/rrg2hzi.css"},{"rel":"icon","type":"image/x-icon","href":"/favico.png"}],"style":[],"script":[{"src":"https://app.eu.usercentrics.eu/browser-ui/latest/loader.js","id":"usercentrics-cmp","async":true,"data-eu-mode":"true","data-settings-id":"lNciREqJBOwvzD"}],"noscript":[]};
 
@@ -2279,7 +2234,7 @@ const asyncContext = getContext("nuxt-dev", {
 	asyncContext: true,
 	AsyncLocalStorage
 });
-const _s6AS7Af0MT2UZsSFdxPfsx2a6KBjgAg6k2d4tx2oiBY = (nitroApp) => {
+const _Y6IbsTyXDyYl4Gl8gnD3B7rdJy9S9wzYjQe29uZ_gQ = (nitroApp) => {
 	const handler = nitroApp.h3App.handler;
 	nitroApp.h3App.handler = (event) => {
 		return asyncContext.callAsync({
@@ -2355,9 +2310,9 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  __T9eswST1BKXMq1tP2SkqX7u0dhQwlHE5F2L_cRRiU,
-_rylfuaRjJy4LRlEJX390o0yeB5nIdvz90aGrCN4qzbw,
-_s6AS7Af0MT2UZsSFdxPfsx2a6KBjgAg6k2d4tx2oiBY,
+  _NI0DxSNNnrS4_GSJ5eJIwbL2h6gDAVLigkw3fzHAcvw,
+_jLJkznUR2cQtl4RFa1hzEEgd3YkOucD1_pIIut6AeZM,
+_Y6IbsTyXDyYl4Gl8gnD3B7rdJy9S9wzYjQe29uZ_gQ,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
 
@@ -2386,7 +2341,7 @@ function getAsset (id) {
 
 const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 const EncodingMap = { gzip: ".gz", br: ".br" };
-const _Nl_t7S = eventHandler((event) => {
+const _9vMn2j = eventHandler((event) => {
   if (event.method && !METHODS.has(event.method)) {
     return;
   }
@@ -2547,7 +2502,7 @@ function getNitroOrigin(e) {
 }
 
 const PORT_SUFFIX_RE = /:\d+$/;
-const _S55spf = eventHandler(async (e) => {
+const _NgvL_H = eventHandler(async (e) => {
   if (e.context._initedSiteConfig)
     return;
   const runtimeConfig = useRuntimeConfig(e);
@@ -2598,7 +2553,7 @@ const _S55spf = eventHandler(async (e) => {
   e.context._initedSiteConfig = true;
 });
 
-const _CgqU5h = eventHandler(async (e) => {
+const _gGcgkl = eventHandler(async (e) => {
   const siteConfig = getSiteConfig(e);
   const nitroOrigin = getNitroOrigin(e);
   const runtimeConfig = useRuntimeConfig(e);
@@ -3014,7 +2969,7 @@ function isValidUrl(value) {
 async function parseSitemapIndex(xml) {
   if (!xml)
     throw new Error("Empty XML input provided");
-  const { XMLParser } = await import('file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/fast-xml-parser/src/fxp.js');
+  const { XMLParser } = await import('file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/fast-xml-parser/src/fxp.js');
   const parser = new XMLParser({
     isArray: (tagName) => tagName === "sitemap",
     removeNSPrefix: true,
@@ -3390,7 +3345,7 @@ async function parseSitemapXml(xml) {
   if (!xml) {
     throw new Error("Empty XML input provided");
   }
-  const { XMLParser } = await import('file:///Users/eliasenglen/Documents/Repositories/black-forest-security/node_modules/fast-xml-parser/src/fxp.js');
+  const { XMLParser } = await import('file://C:/Users/info/Documents/Repositories/black-forest-security/node_modules/fast-xml-parser/src/fxp.js');
   const parser = new XMLParser({
     isArray: (tagName) => ["url", "image", "video", "link", "tag", "price"].includes(tagName),
     removeNSPrefix: true,
@@ -3612,7 +3567,7 @@ function attachUrlWarnings(sources) {
   }
   return sources;
 }
-const _e3chXq = defineEventHandler(async (e) => {
+const _2o__IA = defineEventHandler(async (e) => {
   const _runtimeConfig = useSitemapRuntimeConfig();
   const siteConfig = getSiteConfig(e);
   const { sitemaps: _sitemaps } = _runtimeConfig;
@@ -3646,7 +3601,7 @@ async function fetchXml(url) {
     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
   return response.text();
 }
-const _NmfqvI = defineEventHandler(async (e) => {
+const _f8g__L = defineEventHandler(async (e) => {
   const { url, mode } = getQuery$1(e);
   if (!url || typeof url !== "string")
     return { url: "", isIndex: false, sitemaps: [], warnings: [], error: "Missing url query parameter" };
@@ -3712,7 +3667,7 @@ const _NmfqvI = defineEventHandler(async (e) => {
   };
 });
 
-const _ianxRg = defineEventHandler(async (e) => {
+const _Zg3vuR = defineEventHandler(async (e) => {
   const fixPath = createSitePathResolver(e, { absolute: false, withBase: true });
   const { sitemapName: fallbackSitemapName, cacheMaxAgeSeconds, version, xslColumns, xslTips } = useSitemapRuntimeConfig();
   setHeader(e, "Content-Type", "application/xslt+xml");
@@ -4762,7 +4717,7 @@ async function sitemapXmlEventHandler(e) {
   return createSitemap(e, Object.values(sitemaps)[0], runtimeConfig);
 }
 
-const _GRuMkr = defineEventHandler(sitemapXmlEventHandler);
+const _IJPbrV = defineEventHandler(sitemapXmlEventHandler);
 
 const VueResolver = (_, value) => {
   return isRef(value) ? toValue(value) : value;
@@ -5206,19 +5161,19 @@ async function getIslandContext(event) {
 	};
 }
 
-const _lazy_j2M9pz = () => Promise.resolve().then(function () { return renderer; });
+const _lazy_l6gwOH = () => Promise.resolve().then(function () { return renderer; });
 
 const handlers = [
-  { route: '', handler: _Nl_t7S, lazy: false, middleware: true, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_j2M9pz, lazy: true, middleware: false, method: undefined },
-  { route: '', handler: _S55spf, lazy: false, middleware: true, method: undefined },
-  { route: '/__site-config__/debug.json', handler: _CgqU5h, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/debug.json', handler: _e3chXq, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/debug-production.json', handler: _NmfqvI, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/style.xsl', handler: _ianxRg, lazy: false, middleware: false, method: undefined },
-  { route: '/sitemap.xml', handler: _GRuMkr, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _9vMn2j, lazy: false, middleware: true, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_l6gwOH, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _NgvL_H, lazy: false, middleware: true, method: undefined },
+  { route: '/__site-config__/debug.json', handler: _gGcgkl, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/debug.json', handler: _2o__IA, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/debug-production.json', handler: _f8g__L, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/style.xsl', handler: _Zg3vuR, lazy: false, middleware: false, method: undefined },
+  { route: '/sitemap.xml', handler: _IJPbrV, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: handler$1, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_j2M9pz, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_l6gwOH, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -5443,7 +5398,7 @@ async function runTask(name, {
 }
 
 if (!globalThis.crypto) {
-  globalThis.crypto = crypto$1.webcrypto;
+  globalThis.crypto = nodeCrypto.webcrypto;
 }
 const { NITRO_NO_UNIX_SOCKET, NITRO_DEV_WORKER_ID } = process.env;
 trapUnhandledNodeErrors();

@@ -1,79 +1,28 @@
 <template>
   <ClientOnly>
     <div class="fixed bottom-4 right-4 z-[200000]">
-      <button
-        v-if="!isOpen"
-        type="button"
-        class="inline-flex h-14 w-14 items-center justify-center rounded-full border border-neutral-200 bg-white shadow-lg shadow-black/15 transition-transform hover:scale-[1.03] hover:border-neutral-300"
-        :aria-expanded="isOpen"
-        aria-controls="bfs-chat-panel"
-        aria-label="Chat öffnen"
-        @click="open()"
-      >
-        <img
-          src="/black-forest-security-icon.svg"
-          alt=""
-          class="h-8 w-auto"
-          width="120"
-          height="26"
-        />
+      <button v-if="!isOpen" type="button" class="inline-flex h-14 w-14 items-center justify-center rounded-full border border-neutral-200 bg-white shadow-lg shadow-black/15 transition-transform hover:scale-[1.03] hover:border-neutral-300" :aria-expanded="isOpen" aria-controls="bfs-chat-panel" aria-label="Chat öffnen" @click="open()">
+        <img src="/black-forest-security-icon.svg" alt="" class="h-8 w-auto" width="120" height="26" />
       </button>
     </div>
 
     <Transition name="chat-backdrop">
-      <div
-        v-if="isOpen"
-        class="chat-backdrop fixed inset-0 z-[200000] bg-black/40 lg:hidden"
-        :style="backdropStyle"
-        aria-hidden="true"
-        @click="close()"
-      />
+      <div v-if="isOpen" class="chat-backdrop fixed inset-0 z-[200000] bg-black/40 lg:hidden" :style="backdropStyle" aria-hidden="true" @click="close()" />
     </Transition>
 
     <Transition :name="isLg ? 'chat-drawer' : 'chat-mobile'">
-      <div
-        v-show="isOpen"
-        id="bfs-chat-panel"
-        class="chat-panel fixed inset-x-0 bottom-0 z-[200001] flex h-[80dvh] w-full flex-col overflow-hidden rounded-t-2xl border-t border-neutral-200 bg-white shadow-xl shadow-black/10 lg:inset-x-auto lg:bottom-4 lg:right-4 lg:left-auto lg:h-[min(32rem,calc(100dvh-2rem))] lg:max-h-[min(32rem,calc(100dvh-2rem))] lg:w-[min(92vw,24rem)] lg:rounded-2xl lg:border lg:border-neutral-200 lg:border-t-0 lg:shadow-xl lg:shadow-black/10"
-        :class="{ 'chat-panel--dragging': isDragging, 'chat-panel--snap-back': snapBack }"
-        :style="panelStyle"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Chat mit Black Forest Security"
-      >
-        <div
-          class="shrink-0 touch-none select-none lg:touch-auto"
-          @touchstart.passive="onDragStart"
-          @touchmove.passive="onDragMove"
-          @touchend="onDragEnd"
-          @touchcancel="onDragEnd"
-        >
+      <div v-show="isOpen" id="bfs-chat-panel" class="chat-panel fixed inset-x-0 bottom-0 z-[200001] flex h-[80dvh] w-full flex-col overflow-hidden rounded-t-2xl border-t border-neutral-200 bg-white shadow-xl shadow-black/10 lg:inset-x-auto lg:bottom-4 lg:right-4 lg:left-auto lg:h-[min(32rem,calc(100dvh-2rem))] lg:max-h-[min(32rem,calc(100dvh-2rem))] lg:w-[min(92vw,24rem)] lg:rounded-2xl lg:border lg:border-neutral-200 lg:border-t-0 lg:shadow-xl lg:shadow-black/10" :class="{ 'chat-panel--dragging': isDragging, 'chat-panel--snap-back': snapBack }" :style="panelStyle" role="dialog" aria-modal="true" aria-label="Chat mit Black Forest Security">
+        <div class="shrink-0 touch-none select-none lg:touch-auto" @touchstart.passive="onDragStart" @touchmove.passive="onDragMove" @touchend="onDragEnd" @touchcancel="onDragEnd">
           <div class="flex justify-center pt-2.5 pb-1 lg:hidden" aria-hidden="true">
             <span class="block h-1 w-10 rounded-full bg-neutral-300" />
           </div>
-          <div
-            class="flex items-center justify-between border-b border-neutral-200 px-4 py-3 lg:rounded-t-2xl"
-          >
+          <div class="flex items-center justify-between border-b border-neutral-200 px-4 py-3 lg:rounded-t-2xl">
             <div>
               <p class="text-sm font-semibold text-neutral-900">Black Forest Security</p>
               <p class="text-xs text-neutral-500">KI-Chatbot</p>
             </div>
-            <button
-              type="button"
-              class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-neutral-900"
-              aria-label="Schließen"
-              @click="close()"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="h-5 w-5"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                aria-hidden="true"
-              >
+            <button type="button" class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-neutral-900" aria-label="Schließen" @click="close()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
                 <path d="M18 6 6 18" />
                 <path d="m6 6 12 12" />
               </svg>
@@ -81,25 +30,12 @@
           </div>
         </div>
 
-        <div
-          ref="scrollEl"
-          class="min-h-0 flex-1 space-y-3 overflow-y-auto px-4 py-4 touch-pan-y lg:pb-4"
-          :style="scrollAreaStyle"
-        >
-          <div
-            v-for="msg in messages"
-            :key="msg.id"
-            class="flex"
-            :class="msg.role === 'user' ? 'justify-end' : 'justify-start'"
-          >
-            <div
-              class="max-w-[85%] whitespace-pre-wrap rounded-2xl px-4 py-3 text-sm"
-              :class="
-                msg.role === 'user'
-                  ? 'bg-black text-white'
-                  : 'bg-neutral-100 text-neutral-900'
-              "
-            >
+        <div ref="scrollEl" class="min-h-0 flex-1 space-y-3 overflow-y-auto px-4 py-4 touch-pan-y lg:pb-4" :style="scrollAreaStyle">
+          <div v-for="msg in messages" :key="msg.id" class="flex" :class="msg.role === 'user' ? 'justify-end' : 'justify-start'">
+            <div class="max-w-[85%] whitespace-pre-wrap rounded-2xl px-4 py-3 text-sm" :class="msg.role === 'user'
+              ? 'bg-black text-white'
+              : 'bg-neutral-100 text-neutral-900'
+              ">
               {{ msg.content }}
             </div>
           </div>
@@ -117,116 +53,48 @@
           </div>
         </div>
 
-        <form
-          v-if="isLg"
-          class="shrink-0 border-t border-neutral-200 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
-          @submit.prevent="send()"
-        >
+        <form v-if="isLg" class="shrink-0 border-t border-neutral-200 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]" @submit.prevent="send()">
           <div class="flex items-end gap-2">
             <label class="sr-only" for="bfs-chat-input">Nachricht</label>
-            <textarea
-              id="bfs-chat-input"
-              ref="inputEl"
-              v-model="draft"
-              rows="1"
-              class="min-h-11 flex-1 resize-none rounded-xl border border-neutral-200 px-3 py-2 text-sm text-neutral-900 outline-none focus:border-neutral-400"
-              placeholder="Schreiben Sie eine Nachricht…"
-              :disabled="status === 'sending'"
-              @keydown.enter.exact.prevent="send()"
-            />
-            <button
-              type="submit"
-              class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-black text-white transition-colors hover:bg-neutral-800 disabled:cursor-not-allowed disabled:bg-neutral-400"
-              :disabled="status === 'sending' || !draft.trim()"
-            >
-              <svg
-                v-if="status !== 'sending'"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="h-5 w-5"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
+            <textarea id="bfs-chat-input" ref="inputEl" v-model="draft" rows="1" class="min-h-11 flex-1 resize-none rounded-xl border border-neutral-200 px-3 py-2 text-sm text-neutral-900 outline-none focus:border-neutral-400" placeholder="Schreiben Sie eine Nachricht…" :disabled="status === 'sending'" @keydown.enter.exact.prevent="send()" />
+            <button type="submit" class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-black text-white transition-colors hover:bg-neutral-800 disabled:cursor-not-allowed disabled:bg-neutral-400" :disabled="status === 'sending' || !draft.trim()">
+              <svg v-if="status !== 'sending'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M22 2 11 13" />
                 <path d="M22 2 15 22l-4-9-9-4 20-7Z" />
               </svg>
-              <svg
-                v-else
-                class="h-5 w-5 animate-spin"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
+              <svg v-else class="h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-opacity="0.3" stroke-width="3" />
                 <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
               </svg>
             </button>
           </div>
-          <p class="mt-2 text-[10px] text-neutral-500">
-            Hinweis: Dieser Chat sendet Ihre Nachricht an unseren Automations&shy;dienst (n8n).
-          </p>
+          <div class="pt-2 flex flex-col items-center">
+            <p class="mt-1 text-[10px] text-neutral-500">
+              Ihre Nachrichten werden von OpenAI verarbeitet. Powered by <a href="https://simple-ki.com" target="_blank" class="text-neutral-900 underline">Simple-KI</a>
+            </p>
+          </div>
         </form>
       </div>
     </Transition>
 
     <Teleport to="body">
-      <form
-        v-if="isOpen && !isLg"
-        class="chat-input-bar fixed inset-x-3 z-[200002] rounded-2xl border border-neutral-200 bg-white p-3 shadow-lg shadow-black/10"
-        :style="floatingBarStyle"
-        @submit.prevent="send()"
-      >
+      <form v-if="isOpen && !isLg" class="chat-input-bar fixed inset-x-3 z-[200002] rounded-2xl border border-neutral-200 bg-white p-3 shadow-lg shadow-black/10" :style="floatingBarStyle" @submit.prevent="send()">
         <div class="flex items-end gap-2">
           <label class="sr-only" for="bfs-chat-input-mobile">Nachricht</label>
-          <textarea
-            id="bfs-chat-input-mobile"
-            ref="inputEl"
-            v-model="draft"
-            rows="1"
-            class="min-h-11 flex-1 resize-none rounded-xl border border-neutral-200 px-3 py-2 text-base text-neutral-900 outline-none focus:border-neutral-400"
-            placeholder="Schreiben Sie eine Nachricht…"
-            :disabled="status === 'sending'"
-            @focus="onInputFocus"
-            @keydown.enter.exact.prevent="send()"
-          />
-          <button
-            type="submit"
-            class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-black text-white transition-colors hover:bg-neutral-800 disabled:cursor-not-allowed disabled:bg-neutral-400"
-            :disabled="status === 'sending' || !draft.trim()"
-          >
-            <svg
-              v-if="status !== 'sending'"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
+          <textarea id="bfs-chat-input-mobile" ref="inputEl" v-model="draft" rows="1" class="min-h-11 flex-1 resize-none rounded-xl border border-neutral-200 px-3 py-2 text-base text-neutral-900 outline-none focus:border-neutral-400" placeholder="Schreiben Sie eine Nachricht…" :disabled="status === 'sending'" @focus="onInputFocus" @keydown.enter.exact.prevent="send()" />
+          <button type="submit" class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-black text-white transition-colors hover:bg-neutral-800 disabled:cursor-not-allowed disabled:bg-neutral-400" :disabled="status === 'sending' || !draft.trim()">
+            <svg v-if="status !== 'sending'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M22 2 11 13" />
               <path d="M22 2 15 22l-4-9-9-4 20-7Z" />
             </svg>
-            <svg
-              v-else
-              class="h-5 w-5 animate-spin"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
+            <svg v-else class="h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-opacity="0.3" stroke-width="3" />
               <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
             </svg>
           </button>
         </div>
         <p class="mt-2 text-[10px] text-neutral-500">
-          Hinweis: Dieser Chat sendet Ihre Nachricht an unseren Automations&shy;dienst (n8n).
+          Nachricht an ueerwAudtomvon OpenaI verarbeitei. Powered by <a href="h&tps://simple-ks.chm" target="_blayk" cla;i="t(xt-neunral-900)uderlie">Simple-KI</a>
         </p>
       </form>
     </Teleport>
@@ -288,7 +156,7 @@ const messages = ref<ChatMessage[]>([
     id: crypto.randomUUID(),
     role: "assistant",
     content:
-      "Hallo! Wie können wir Ihnen helfen? (z. B. Veranstaltungsschutz, Objektschutz, Baustellenüberwachung)",
+      "Willkommen bei Black Forest Security! Wie können wir Ihnen helfen?",
     createdAt: Date.now(),
   },
 ]);
@@ -693,6 +561,7 @@ onUnmounted(() => {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .chat-backdrop-enter-active,
   .chat-backdrop-leave-active,
   .chat-mobile-enter-active,
