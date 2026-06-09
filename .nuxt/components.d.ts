@@ -15,6 +15,7 @@ type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {},
 
 
 export const ChatWidget: typeof import("../app/components/ChatWidget.vue")['default']
+export const FloatingPhoneButton: typeof import("../app/components/FloatingPhoneButton.vue")['default']
 export const SiteFooter: typeof import("../app/components/SiteFooter.vue")['default']
 export const SiteHeader: typeof import("../app/components/SiteHeader.vue")['default']
 export const BlackForestSecurity: typeof import("../app/components/black-forest-security.vue")['default']
@@ -59,6 +60,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const LazyChatWidget: LazyComponent<typeof import("../app/components/ChatWidget.vue")['default']>
+export const LazyFloatingPhoneButton: LazyComponent<typeof import("../app/components/FloatingPhoneButton.vue")['default']>
 export const LazySiteFooter: LazyComponent<typeof import("../app/components/SiteFooter.vue")['default']>
 export const LazySiteHeader: LazyComponent<typeof import("../app/components/SiteHeader.vue")['default']>
 export const LazyBlackForestSecurity: LazyComponent<typeof import("../app/components/black-forest-security.vue")['default']>

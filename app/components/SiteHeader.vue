@@ -106,7 +106,7 @@
             >
               info@black-forest-security.de
             </a>
-            <p class="mt-2 text-sm text-neutral-500">0761 55655725</p>
+            <a href="tel:07613896836" class="mt-2 text-sm text-neutral-500">0761 3896836</a>
           </div>
         </nav>
       </div>

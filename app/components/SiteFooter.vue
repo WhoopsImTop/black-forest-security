@@ -12,7 +12,10 @@
         <section>
           <div class="space-y-3 text-sm text-neutral-400">
             <p>Black Forest Security GmbH<br />Kaiser-Joseph-Straße 194<br />79098 Freiburg</p>
-            <a href="mailto:info@black-forest-security.de" class="block hover:text-white">info@black-forest-security.de</a>
+            <div>
+              <a href="mailto:info@black-forest-security.de" class="block hover:text-white">info@black-forest-security.de</a>
+              <a href="tel:07613896836" class="block hover:text-white">0761 3896836</a>
+            </div>
           </div>
         </section>
 

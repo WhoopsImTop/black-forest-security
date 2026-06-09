@@ -10,8 +10,9 @@ export const siteContact = {
   region: "Baden-Württemberg",
   country: "DE",
   email: "info@black-forest-security.de",
-  phone: "0761 55655725",
-  phoneImpressum: "01786375306",
+  phone: "0761 3896836",
+  phoneFloating: "0761 3896836",
+  phoneImpressum: "0761 3896836",
   officeHours: ["Mo - So: rund um die Uhr"],
 } as const;
 

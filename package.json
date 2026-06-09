@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
+    "build:embed": "vite build --config embed/vite.config.ts",
     "dev": "nuxt dev",
+    "dev:embed": "vite --config embed/vite.config.ts",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -19,5 +21,9 @@
     "tailwindcss": "^4.2.2",
     "vue": "^3.5.30",
     "vue-router": "^5.0.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.7",
+    "vite": "^7.3.3"
   }
 }
