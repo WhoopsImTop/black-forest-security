@@ -4,6 +4,7 @@ import {
   DEFAULT_CONFIG,
   type SimpleKIChatConfig,
 } from "./types";
+import widgetCss from "./widget.css?inline";
 
 declare global {
   interface Window {
@@ -74,9 +75,33 @@ function ensureMountElement(): HTMLElement {
   const el = document.createElement("div");
   el.id = "simple-ki-chat-mount";
   el.style.cssText =
-    "position:fixed;bottom:1rem;right:1rem;z-index:199999;display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem;pointer-events:none;";
+    "all:initial;position:fixed;bottom:1rem;right:1rem;z-index:199999;display:block;pointer-events:none;";
   document.body.appendChild(el);
   return el;
+}
+
+function createIsolatedHost(): {
+  widgetHost: HTMLElement;
+  teleportTarget: HTMLElement;
+} {
+  const shadowHost = document.createElement("div");
+  shadowHost.style.cssText = "all:initial;display:block;pointer-events:auto;";
+  const shadow = shadowHost.attachShadow({ mode: "open" });
+
+  const styleEl = document.createElement("style");
+  styleEl.textContent = widgetCss;
+  shadow.appendChild(styleEl);
+
+  const teleportTarget = document.createElement("div");
+  teleportTarget.id = "ski-chat-teleport";
+  shadow.appendChild(teleportTarget);
+
+  const widgetHost = document.createElement("div");
+  shadow.appendChild(widgetHost);
+
+  mountEl?.appendChild(shadowHost);
+
+  return { widgetHost, teleportTarget };
 }
 
 function init(config?: Partial<SimpleKIChatConfig>) {
@@ -91,9 +116,7 @@ function init(config?: Partial<SimpleKIChatConfig>) {
   mountEl = ensureMountElement();
   mountEl.innerHTML = "";
 
-  const widgetHost = document.createElement("div");
-  widgetHost.style.pointerEvents = "auto";
-  mountEl.appendChild(widgetHost);
+  const { widgetHost, teleportTarget } = createIsolatedHost();
 
   mountedApp = createApp(ChatWidget, {
     webhookUrl: resolved.webhookUrl,
@@ -103,6 +126,7 @@ function init(config?: Partial<SimpleKIChatConfig>) {
     welcomeMessage: resolved.welcomeMessage ?? DEFAULT_CONFIG.welcomeMessage,
     source: resolved.source ?? DEFAULT_CONFIG.source,
     primaryColor: resolved.primaryColor ?? DEFAULT_CONFIG.primaryColor,
+    teleportTarget,
   });
 
   mountedApp.mount(widgetHost);

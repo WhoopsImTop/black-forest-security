@@ -18,7 +18,7 @@ Einbettbares Chat-Widget für beliebige Webseiten. Nach dem Build liegt das Bund
     source: "kunde-xyz",
   };
 </script>
-<script src="https://cdn.simple-ki.com/chat-widget.js" async></script>
+<script src="https://simple-ki.com/scripts/chat-widget.js" async></script>
 ```
 
 ### Variante B: Data-Attribute am Script-Tag
@@ -79,3 +79,7 @@ npm run build:embed
 ```
 
 Das Build-Artefakt `embed/dist/chat-widget.js` enthält Vue und alle Styles inline — es reicht ein einziges Script-Tag.
+
+## Style-Isolation
+
+Das Embed-Widget rendert in einem **Shadow DOM** mit eigenem CSS-Reset. Host-Seiten-Styles (Bootstrap, Tailwind, globale Resets) beeinflussen das Widget dadurch nicht.

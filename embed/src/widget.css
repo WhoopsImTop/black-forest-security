@@ -1,0 +1,473 @@
+/* Shadow-host reset (wirkt im Embed via Shadow DOM) */
+:host {
+  all: initial;
+  display: block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #171717;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Host-Seiten-CSS abwehren */
+.ski-chat-root,
+.ski-chat-root *,
+.ski-chat-root *::before,
+.ski-chat-root *::after {
+  box-sizing: border-box;
+}
+
+.ski-chat-root {
+  display: block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #171717;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+.ski-chat-root img {
+  display: block;
+  max-width: none;
+  border: 0;
+}
+
+.ski-chat-root button,
+.ski-chat-root input,
+.ski-chat-root textarea {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.ski-chat-root button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+.ski-chat-root a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ski-chat-root p {
+  margin: 0;
+}
+
+.ski-chat-root svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.ski-chat-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ski-chat-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 9999px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.15);
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.ski-chat-trigger:hover {
+  transform: scale(1.03);
+  border-color: #d4d4d4;
+}
+
+.ski-chat-trigger__logo {
+  height: 2rem;
+  width: auto;
+  max-width: 2rem;
+  object-fit: contain;
+}
+
+.ski-chat-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200000;
+  background: rgb(0 0 0 / 0.4);
+}
+
+.ski-chat-panel {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 200001;
+  display: flex;
+  height: 80dvh;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border-top: 1px solid #e5e5e5;
+  border-radius: 1rem 1rem 0 0;
+  background: #fff;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+.ski-chat-panel--snap-back {
+  transition: transform 0.22s ease-out;
+}
+
+.ski-chat-panel--dragging {
+  transition: none;
+}
+
+.ski-chat-panel__header-wrap {
+  flex-shrink: 0;
+  touch-action: none;
+  user-select: none;
+}
+
+.ski-chat-panel__handle {
+  display: flex;
+  justify-content: center;
+  padding: 0.625rem 0 0.25rem;
+}
+
+.ski-chat-panel__handle-bar {
+  display: block;
+  height: 0.25rem;
+  width: 2.5rem;
+  border-radius: 9999px;
+  background: #d4d4d4;
+}
+
+.ski-chat-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0.75rem 1rem;
+}
+
+.ski-chat-panel__title {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #171717;
+}
+
+.ski-chat-panel__subline {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #737373;
+}
+
+.ski-chat-panel__close {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 0.375rem;
+  background: transparent;
+  color: #525252;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.ski-chat-panel__close:hover {
+  background: #f5f5f5;
+  color: #171717;
+}
+
+.ski-chat-panel__close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ski-chat-messages {
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  touch-action: pan-y;
+}
+
+.ski-chat-message-row {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.ski-chat-message-row--user {
+  justify-content: flex-end;
+}
+
+.ski-chat-message-row--bot {
+  justify-content: flex-start;
+}
+
+.ski-chat-bubble {
+  max-width: 85%;
+  white-space: pre-wrap;
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+}
+
+.ski-chat-bubble--user {
+  background: var(--ski-chat-primary, #000);
+  color: #fff;
+}
+
+.ski-chat-bubble--bot {
+  background: #f5f5f5;
+  color: #171717;
+}
+
+.ski-chat-typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 1rem;
+  background: #f5f5f5;
+  padding: 0.5rem 0.75rem;
+}
+
+.ski-chat-typing__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #a3a3a3;
+  animation: ski-chat-pulse 1s ease-in-out infinite;
+}
+
+.ski-chat-typing__dot--delay-1 {
+  animation-delay: 120ms;
+}
+
+.ski-chat-typing__dot--delay-2 {
+  animation-delay: 240ms;
+}
+
+@keyframes ski-chat-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.ski-chat-error {
+  border-radius: 0.75rem;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  color: #b91c1c;
+}
+
+.ski-chat-form {
+  flex-shrink: 0;
+  border-top: 1px solid #e5e5e5;
+  padding: 0.75rem;
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  background: #fff;
+}
+
+.ski-chat-form--mobile {
+  position: fixed;
+  inset-inline: 0.75rem;
+  z-index: 200002;
+  border: 1px solid #e5e5e5;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  transition: bottom 0.2s ease;
+}
+
+.ski-chat-form__row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.ski-chat-input {
+  min-height: 2.75rem;
+  flex: 1;
+  resize: none;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e5;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #171717;
+  background: #fff;
+  outline: none;
+  font-family: inherit;
+}
+
+.ski-chat-input--mobile {
+  font-size: 1rem;
+}
+
+.ski-chat-input:focus {
+  border-color: #a3a3a3;
+}
+
+.ski-chat-input:disabled {
+  opacity: 0.6;
+}
+
+.ski-chat-root,
+.ski-chat-form--mobile {
+  --ski-chat-primary: #000;
+  --ski-chat-primary-hover: color-mix(in srgb, var(--ski-chat-primary) 82%, black);
+}
+
+.ski-chat-send {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: var(--ski-chat-primary, #000);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.ski-chat-send:hover:not(:disabled) {
+  background: var(--ski-chat-primary-hover, #262626);
+}
+
+.ski-chat-send:disabled {
+  cursor: not-allowed;
+  background: #a3a3a3;
+}
+
+.ski-chat-send svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ski-chat-send__spinner {
+  animation: ski-chat-spin 1s linear infinite;
+}
+
+@keyframes ski-chat-spin {
+  to { transform: rotate(360deg); }
+}
+
+.ski-chat-footer {
+  margin: 0.5rem 0 0;
+  text-align: center;
+  font-size: 10px;
+  color: #737373;
+}
+
+.ski-chat-footer a {
+  color: #171717;
+  text-decoration: underline;
+}
+
+.ski-chat-backdrop-enter-active,
+.ski-chat-backdrop-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.ski-chat-backdrop-enter-from,
+.ski-chat-backdrop-leave-to {
+  opacity: 0;
+}
+
+.ski-chat-mobile-enter-active,
+.ski-chat-mobile-leave-active {
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.ski-chat-mobile-enter-from,
+.ski-chat-mobile-leave-to {
+  transform: translateY(100%);
+}
+
+.ski-chat-drawer-enter-active,
+.ski-chat-drawer-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.ski-chat-drawer-enter-from,
+.ski-chat-drawer-leave-to {
+  transform: translateY(12px) scale(0.98);
+  opacity: 0;
+}
+
+@media (min-width: 1024px) {
+  .ski-chat-backdrop {
+    display: none;
+  }
+
+  .ski-chat-panel {
+    inset-inline: auto 1rem;
+    bottom: 1rem;
+    left: auto;
+    right: 1rem;
+    height: min(32rem, calc(100dvh - 2rem));
+    max-height: min(32rem, calc(100dvh - 2rem));
+    width: min(92vw, 24rem);
+    border: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    border-radius: 1rem;
+  }
+
+  .ski-chat-panel__header-wrap {
+    touch-action: auto;
+    user-select: auto;
+  }
+
+  .ski-chat-panel__handle {
+    display: none;
+  }
+
+  .ski-chat-panel__header {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .ski-chat-messages {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ski-chat-backdrop-enter-active,
+  .ski-chat-backdrop-leave-active,
+  .ski-chat-mobile-enter-active,
+  .ski-chat-mobile-leave-active,
+  .ski-chat-drawer-enter-active,
+  .ski-chat-drawer-leave-active,
+  .ski-chat-panel--snap-back,
+  .ski-chat-form--mobile {
+    transition-duration: 0.01ms !important;
+  }
+
+  .ski-chat-mobile-enter-from,
+  .ski-chat-mobile-leave-to,
+  .ski-chat-drawer-enter-from,
+  .ski-chat-drawer-leave-to {
+    transform: none;
+    opacity: 0;
+  }
+}

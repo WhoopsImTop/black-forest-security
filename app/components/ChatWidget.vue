@@ -14,6 +14,7 @@
 
 <script setup lang="ts">
 import EmbedChatWidget from "../../embed/src/ChatWidget.vue";
+import "../../embed/src/widget.css";
 
 const { public: publicConfig } = useRuntimeConfig();
 const webhookUrl = publicConfig.chatWebhookUrl as string;
