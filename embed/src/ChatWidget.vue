@@ -218,6 +218,7 @@ const props = withDefaults(
 
 const themeStyle = computed(() => ({
   "--ski-chat-primary": normalizePrimaryColor(props.primaryColor),
+  "--ski-chat-bg": "#fff",
 }));
 
 const DRAG_CLOSE_THRESHOLD = 80;

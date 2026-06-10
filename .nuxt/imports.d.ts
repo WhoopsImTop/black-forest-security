@@ -43,4 +43,3 @@ export { useNitroOrigin } from '../node_modules/nuxt-site-config/dist/runtime/ap
 export { useSiteConfig } from '../node_modules/nuxt-site-config/dist/runtime/app/composables/useSiteConfig';
 export { createSitePathResolver, withSiteTrailingSlash, withSiteUrl } from '../node_modules/nuxt-site-config/dist/runtime/app/composables/utils';
 export { defineStore, acceptHMRUpdate, usePinia, storeToRefs } from '../node_modules/@pinia/nuxt/dist/runtime/composables';
-export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
