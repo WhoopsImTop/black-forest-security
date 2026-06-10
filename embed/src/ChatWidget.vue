@@ -182,7 +182,11 @@ import {
   ref,
   watch,
 } from "vue";
-import { DEFAULT_CONFIG, normalizePrimaryColor } from "./types";
+import {
+  DEFAULT_CONFIG,
+  normalizeBackgroundColor,
+  normalizePrimaryColor,
+} from "./types";
 
 type ChatRole = "user" | "assistant";
 type ChatMessage = {
@@ -201,6 +205,7 @@ const props = withDefaults(
     welcomeMessage?: string;
     source?: string;
     primaryColor?: string;
+    backgroundColor?: string;
     hideUsercentricsOnOpen?: boolean;
     teleportTarget?: string | HTMLElement;
   }>(),
@@ -211,15 +216,21 @@ const props = withDefaults(
     welcomeMessage: DEFAULT_CONFIG.welcomeMessage,
     source: DEFAULT_CONFIG.source,
     primaryColor: DEFAULT_CONFIG.primaryColor,
+    backgroundColor: DEFAULT_CONFIG.backgroundColor,
     hideUsercentricsOnOpen: false,
     teleportTarget: "body",
   },
 );
 
-const themeStyle = computed(() => ({
-  "--ski-chat-primary": normalizePrimaryColor(props.primaryColor),
-  "--ski-chat-bg": "#fff",
-}));
+const themeStyle = computed(() => {
+  const primary = normalizePrimaryColor(props.primaryColor);
+  return {
+    "--ski-chat-primary": primary,
+    "--ski-chat-primary-hover": `color-mix(in srgb, ${primary} 82%, black)`,
+    "--ski-chat-bg": "#fff",
+    "--ski-chat-trigger-bg": normalizeBackgroundColor(props.backgroundColor),
+  };
+});
 
 const DRAG_CLOSE_THRESHOLD = 80;
 const DRAG_VELOCITY_THRESHOLD = 0.5;

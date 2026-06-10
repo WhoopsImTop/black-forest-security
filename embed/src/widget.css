@@ -2,11 +2,16 @@
 :host {
   all: initial;
   display: block;
+  font-size: 16px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
   color: #171717;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#ski-chat-teleport {
+  font-size: 16px;
 }
 
 /* Host-Seiten-CSS abwehren */
@@ -19,6 +24,7 @@
 
 .ski-chat-root {
   display: block;
+  font-size: 16px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
   color: #171717;
@@ -44,9 +50,8 @@
   -webkit-appearance: none;
 }
 
-.ski-chat-root button {
-  background: #ffffff;
-  border: none;
+.ski-chat-root button,
+.ski-chat-form--mobile button {
   padding: 0;
   cursor: pointer;
   color: inherit;
@@ -78,29 +83,31 @@
   border: 0;
 }
 
-.ski-chat-trigger {
+.ski-chat-root .ski-chat-trigger,
+.ski-chat-form--mobile .ski-chat-trigger {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.5em;
+  height: 3.5em;
   border-radius: 9999px;
-  border: 1px solid #e5e5e5;
-  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--ski-chat-trigger-bg, #fff) 82%, #000);
+  background: var(--ski-chat-trigger-bg, #fff);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.15);
   cursor: pointer;
-  transition: transform 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.ski-chat-trigger:hover {
+.ski-chat-root .ski-chat-trigger:hover,
+.ski-chat-form--mobile .ski-chat-trigger:hover {
   transform: scale(1.03);
-  border-color: #d4d4d4;
+  border-color: color-mix(in srgb, var(--ski-chat-trigger-bg, #fff) 70%, #000);
 }
 
 .ski-chat-trigger__logo {
-  height: 2rem;
+  height: 2em;
   width: auto;
-  max-width: 2rem;
+  max-width: 2em;
   object-fit: contain;
 }
 
@@ -122,7 +129,7 @@
   flex-direction: column;
   overflow: hidden;
   border-top: 1px solid #e5e5e5;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 1em 1em 0 0;
   background: var(--ski-chat-bg, #fff);
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 }
@@ -145,13 +152,13 @@
 .ski-chat-panel__handle {
   display: flex;
   justify-content: center;
-  padding: 0.625rem 0 0.25rem;
+  padding: 0.625em 0 0.25em;
 }
 
 .ski-chat-panel__handle-bar {
   display: block;
-  height: 0.25rem;
-  width: 2.5rem;
+  height: 0.25em;
+  width: 2.5em;
   border-radius: 9999px;
   background: #d4d4d4;
 }
@@ -161,59 +168,61 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #e5e5e5;
-  padding: 0.75rem 1rem;
+  padding: 0.75em 1em;
 }
 
 .ski-chat-panel__title {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   font-weight: 600;
   color: #171717;
 }
 
 .ski-chat-panel__subline {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   color: #737373;
 }
 
-.ski-chat-panel__close {
+.ski-chat-root .ski-chat-panel__close,
+.ski-chat-form--mobile .ski-chat-panel__close {
   display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.25em;
+  height: 2.25em;
   border: none;
-  border-radius: 0.375rem;
-  background: #ffffff;
+  border-radius: 0.375em;
+  background: transparent;
   color: #525252;
   cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.ski-chat-panel__close:hover {
+.ski-chat-root .ski-chat-panel__close:hover,
+.ski-chat-form--mobile .ski-chat-panel__close:hover {
   background: #f5f5f5;
   color: #171717;
 }
 
 .ski-chat-panel__close svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.25em;
+  height: 1.25em;
 }
 
 .ski-chat-messages {
   min-height: 0;
   flex: 1;
   overflow-y: auto;
-  padding: 1rem;
+  padding: 1em;
   touch-action: pan-y;
   background: var(--ski-chat-bg, #fff);
 }
 
 .ski-chat-message-row {
   display: flex;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.75em;
 }
 
 .ski-chat-message-row--user {
@@ -227,9 +236,9 @@
 .ski-chat-bubble {
   max-width: 85%;
   white-space: pre-wrap;
-  border-radius: 1rem;
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
+  border-radius: 1em;
+  padding: 0.75em 1em;
+  font-size: 0.875em;
 }
 
 .ski-chat-bubble--user {
@@ -245,15 +254,15 @@
 .ski-chat-typing {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  border-radius: 1rem;
+  gap: 0.25em;
+  border-radius: 1em;
   background: #f5f5f5;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5em 0.75em;
 }
 
 .ski-chat-typing__dot {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.5em;
+  height: 0.5em;
   border-radius: 9999px;
   background: #a3a3a3;
   animation: ski-chat-pulse 1s ease-in-out infinite;
@@ -273,28 +282,29 @@
 }
 
 .ski-chat-error {
-  border-radius: 0.75rem;
+  border-radius: 0.75em;
   border: 1px solid #fecaca;
   background: #fef2f2;
-  padding: 0.75rem;
-  font-size: 0.75rem;
+  padding: 0.75em;
+  font-size: 0.75em;
   color: #b91c1c;
 }
 
 .ski-chat-form {
   flex-shrink: 0;
   border-top: 1px solid #e5e5e5;
-  padding: 0.75rem;
-  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  padding: 0.75em;
+  padding-bottom: max(0.75em, env(safe-area-inset-bottom));
   background: var(--ski-chat-bg, #fff);
 }
 
 .ski-chat-form--mobile {
   position: fixed;
-  inset-inline: 0.75rem;
+  font-size: 16px;
+  inset-inline: 0.75em;
   z-index: 200002;
   border: 1px solid #e5e5e5;
-  border-radius: 1rem;
+  border-radius: 1em;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   transition: bottom 0.2s ease;
 }
@@ -302,17 +312,17 @@
 .ski-chat-form__row {
   display: flex;
   align-items: flex-end;
-  gap: 0.5rem;
+  gap: 0.5em;
 }
 
 .ski-chat-input {
-  min-height: 2.75rem;
+  min-height: 2.75em;
   flex: 1;
   resize: none;
-  border-radius: 0.75rem;
+  border-radius: 0.75em;
   border: 1px solid #e5e5e5;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
+  padding: 0.5em 0.75em;
+  font-size: 0.875em;
   color: #171717;
   background: #fff;
   outline: none;
@@ -320,7 +330,7 @@
 }
 
 .ski-chat-input--mobile {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .ski-chat-input:focus {
@@ -338,33 +348,38 @@
   --ski-chat-bg: #fff;
 }
 
-.ski-chat-send {
+.ski-chat-root .ski-chat-send,
+.ski-chat-form--mobile .ski-chat-send {
   display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2.75em;
+  height: 2.75em;
   border: none;
-  border-radius: 0.75rem;
-  background: var(--ski-chat-primary, #000);
+  outline: none;
+  border-radius: 0.75em;
+  background-color: var(--ski-chat-primary, #000);
   color: #fff;
   cursor: pointer;
   transition: background-color 0.15s ease;
 }
 
-.ski-chat-send:hover:not(:disabled) {
-  background: var(--ski-chat-primary-hover, #262626);
+.ski-chat-root .ski-chat-send:hover:not(:disabled),
+.ski-chat-form--mobile .ski-chat-send:hover:not(:disabled) {
+  background-color: var(--ski-chat-primary-hover, #262626);
 }
 
-.ski-chat-send:disabled {
+.ski-chat-root .ski-chat-send:disabled,
+.ski-chat-form--mobile .ski-chat-send:disabled {
   cursor: not-allowed;
-  background: #a3a3a3;
+  background-color: #a3a3a3;
 }
 
-.ski-chat-send svg {
-  width: 1.25rem;
-  height: 1.25rem;
+.ski-chat-root .ski-chat-send svg,
+.ski-chat-form--mobile .ski-chat-send svg {
+  width: 1.25em;
+  height: 1.25em;
 }
 
 .ski-chat-send__spinner {
@@ -376,7 +391,7 @@
 }
 
 .ski-chat-footer {
-  margin: 0.5rem 0 0;
+  margin: 0.5em 0 0;
   text-align: center;
   font-size: 10px;
   color: #737373;
@@ -424,16 +439,16 @@
   }
 
   .ski-chat-panel {
-    inset-inline: auto 1rem;
-    bottom: 1rem;
+    inset-inline: auto 1em;
+    bottom: 1em;
     left: auto;
-    right: 1rem;
-    height: min(32rem, calc(100dvh - 2rem));
-    max-height: min(32rem, calc(100dvh - 2rem));
-    width: min(92vw, 24rem);
+    right: 1em;
+    height: min(32em, calc(100dvh - 2em));
+    max-height: min(32em, calc(100dvh - 2em));
+    width: min(92vw, 24em);
     border: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
-    border-radius: 1rem;
+    border-radius: 1em;
   }
 
   .ski-chat-panel__header-wrap {
@@ -446,11 +461,11 @@
   }
 
   .ski-chat-panel__header {
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 1em 1em 0 0;
   }
 
   .ski-chat-messages {
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
   }
 }
 
