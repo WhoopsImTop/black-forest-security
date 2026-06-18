@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   site: {
     url: "https://www.black-forest-security.de",
     name: "Black Forest Security GmbH",
+    trailingSlash: true,
   },
   runtimeConfig: {
     public: {
@@ -27,6 +28,7 @@ export default defineNuxtConfig({
     preset: "static", // ← das ist der entscheidende Punkt bei Nuxt 4
     prerender: {
       crawlLinks: true,
+      trailingSlash: true,
     },
   },
   routeRules: {
