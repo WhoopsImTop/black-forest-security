@@ -16,7 +16,7 @@ export const ueberUnsIntro = {
 };
 
 export const teamMembers: TeamMember[] = [
-  { name: "Enrico Stancio", role: "Geschäftsführer", image: "/enrico-stancio.jpeg" },
+  { name: "Enrico Stanciu", role: "Geschäftsführer", image: "/enrico-stancio.jpeg" },
   { name: "Mervan Aslan", role: "Büromanager", image: "/mervan-aslan.jpg" },
   { name: "Andy Fischer", role: "Personalmanagement", image: "/andy-fischer.jpg" },
 ];

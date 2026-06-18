@@ -1,8 +1,8 @@
 # Über Uns
 
 ::Contact Component
-![Enrico Stancio]()
-**Enrico Stancio**
+![Enrico Stanciu]()
+**Enrico Stanciu**
 Gechäftsführer
 ::
 
