@@ -44,6 +44,7 @@ function readScriptDataset(): Partial<SimpleKIChatConfig> {
   if (dataset.welcomeMessage) config.welcomeMessage = dataset.welcomeMessage;
   if (dataset.source) config.source = dataset.source;
   if (dataset.primaryColor) config.primaryColor = dataset.primaryColor;
+  if (dataset.backgroundColor) config.backgroundColor = dataset.backgroundColor;
 
   return config;
 }
@@ -75,7 +76,7 @@ function ensureMountElement(): HTMLElement {
   const el = document.createElement("div");
   el.id = "simple-ki-chat-mount";
   el.style.cssText =
-    "all:initial;position:fixed;bottom:1rem;right:1rem;z-index:199999;display:block;pointer-events:none;";
+    "all:initial;position:fixed;bottom:16px;right:16px;z-index:199999;display:block;pointer-events:none;";
   document.body.appendChild(el);
   return el;
 }
@@ -126,6 +127,7 @@ function init(config?: Partial<SimpleKIChatConfig>) {
     welcomeMessage: resolved.welcomeMessage ?? DEFAULT_CONFIG.welcomeMessage,
     source: resolved.source ?? DEFAULT_CONFIG.source,
     primaryColor: resolved.primaryColor ?? DEFAULT_CONFIG.primaryColor,
+    backgroundColor: resolved.backgroundColor ?? DEFAULT_CONFIG.backgroundColor,
     teleportTarget,
   });
 

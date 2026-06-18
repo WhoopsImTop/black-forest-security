@@ -6,6 +6,7 @@ export type SimpleKIChatConfig = {
   welcomeMessage?: string;
   source?: string;
   primaryColor?: string;
+  backgroundColor?: string;
 };
 
 export const DEFAULT_LOGO_URL =
@@ -20,11 +21,23 @@ export const DEFAULT_CONFIG: Required<
   welcomeMessage: "Wie können wir Ihnen helfen?",
   source: "embed",
   primaryColor: "#000000",
+  backgroundColor: "#ffffff",
 };
 
 const HEX_COLOR_RE = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
 
-export function normalizePrimaryColor(color?: string): string {
+export function normalizeHexColor(
+  color: string | undefined,
+  fallback: string,
+): string {
   if (color && HEX_COLOR_RE.test(color)) return color;
-  return DEFAULT_CONFIG.primaryColor;
+  return fallback;
+}
+
+export function normalizePrimaryColor(color?: string): string {
+  return normalizeHexColor(color, DEFAULT_CONFIG.primaryColor);
+}
+
+export function normalizeBackgroundColor(color?: string): string {
+  return normalizeHexColor(color, DEFAULT_CONFIG.backgroundColor);
 }

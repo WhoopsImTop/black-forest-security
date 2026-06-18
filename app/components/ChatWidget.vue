@@ -7,6 +7,8 @@
       logo-url="/black-forest-security-icon.svg"
       welcome-message="Willkommen bei Black Forest Security! Wie können wir Ihnen helfen?"
       source="bfs-site"
+      primary-color="#000000"
+      background-color="#ffffff"
       hide-usercentrics-on-open
     />
   </ClientOnly>

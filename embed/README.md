@@ -15,6 +15,7 @@ Einbettbares Chat-Widget für beliebige Webseiten. Nach dem Build liegt das Bund
     logoUrl: "https://example.com/logo.svg",
     welcomeMessage: "Willkommen! Wie können wir Ihnen helfen?",
     primaryColor: "#1a56db",
+    backgroundColor: "#1a56db",
     source: "kunde-xyz",
   };
 </script>
@@ -32,6 +33,7 @@ Einbettbares Chat-Widget für beliebige Webseiten. Nach dem Build liegt das Bund
   data-logo-url="https://example.com/logo.svg"
   data-welcome-message="Willkommen!"
   data-primary-color="#1a56db"
+  data-background-color="#1a56db"
   data-source="kunde-xyz"
   async
 ></script>
@@ -48,6 +50,7 @@ Einbettbares Chat-Widget für beliebige Webseiten. Nach dem Build liegt das Bund
 | `welcomeMessage` | Nein | `"Wie können wir Ihnen helfen?"` | Erste Bot-Nachricht |
 | `source` | Nein | `"embed"` | Kennung im Webhook-Payload |
 | `primaryColor` | Nein | `"#000000"` | Primärfarbe für Send-Button und Nutzer-Nachrichten (Hex) |
+| `backgroundColor` | Nein | `"#ffffff"` | Hintergrundfarbe des runden Chat-Buttons — z. B. für weiße Logos auf hellem Seitenhintergrund |
 
 ## JavaScript-API
 
@@ -83,3 +86,5 @@ Das Build-Artefakt `embed/dist/chat-widget.js` enthält Vue und alle Styles inli
 ## Style-Isolation
 
 Das Embed-Widget rendert in einem **Shadow DOM** mit eigenem CSS-Reset. Host-Seiten-Styles (Bootstrap, Tailwind, globale Resets) beeinflussen das Widget dadurch nicht.
+
+Größenangaben nutzen `em`/`px` relativ zu einer festen Widget-Basis von `16px` (`.ski-chat-root`) — nicht `rem`. Damit bleibt das Layout auch bei `html { font-size: 10px }` (z. B. Shopify) unverändert.
