@@ -64,7 +64,7 @@ export default defineNuxtConfig({
           id: "usercentrics-cmp",
           async: true,
           "data-eu-mode": "true",
-          "data-settings-id": "lNciREqJBOwvzD",
+          "data-settings-id": "5P9VLo20fLBYW8",
         },
       ],
     },
