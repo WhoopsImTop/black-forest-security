@@ -66,6 +66,33 @@ export default defineNuxtConfig({
           "data-eu-mode": "true",
           "data-settings-id": "5P9VLo20fLBYW8",
         },
+        // 1. Google gtag library (blocked until consent)
+        {
+          src: "https://www.googletagmanager.com/gtag/js?id=AW-16810934028",
+          async: true,
+          type: "text/plain",
+          "data-usercentrics": "Google Ads",
+        },
+
+        // 2. gtag initialization (MUSS ebenfalls blockiert sein)
+        {
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+          `,
+          type: "text/plain",
+          "data-usercentrics": "Google Ads",
+        },
+
+        // 3. config call (ebenfalls blockiert)
+        {
+          innerHTML: `
+            gtag('js', new Date());
+            gtag('config', 'AW-16810934028');
+          `,
+          type: "text/plain",
+          "data-usercentrics": "Google Ads",
+        },
       ],
     },
   },
