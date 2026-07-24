@@ -27,6 +27,7 @@ interface _GlobalComponents {
   SectionsLandingHero: typeof import("../../app/components/sections/LandingHero.vue")['default']
   SectionsMoreServicesSlider: typeof import("../../app/components/sections/MoreServicesSlider.vue")['default']
   SectionsPageHero: typeof import("../../app/components/sections/PageHero.vue")['default']
+  SectionsPartnerParade: typeof import("../../app/components/sections/PartnerParade.vue")['default']
   SectionsServiceCard: typeof import("../../app/components/sections/ServiceCard.vue")['default']
   SectionsServicesGrid: typeof import("../../app/components/sections/ServicesGrid.vue")['default']
   SectionsStatsSection: typeof import("../../app/components/sections/StatsSection.vue")['default']
@@ -72,6 +73,7 @@ interface _GlobalComponents {
   LazySectionsLandingHero: LazyComponent<typeof import("../../app/components/sections/LandingHero.vue")['default']>
   LazySectionsMoreServicesSlider: LazyComponent<typeof import("../../app/components/sections/MoreServicesSlider.vue")['default']>
   LazySectionsPageHero: LazyComponent<typeof import("../../app/components/sections/PageHero.vue")['default']>
+  LazySectionsPartnerParade: LazyComponent<typeof import("../../app/components/sections/PartnerParade.vue")['default']>
   LazySectionsServiceCard: LazyComponent<typeof import("../../app/components/sections/ServiceCard.vue")['default']>
   LazySectionsServicesGrid: LazyComponent<typeof import("../../app/components/sections/ServicesGrid.vue")['default']>
   LazySectionsStatsSection: LazyComponent<typeof import("../../app/components/sections/StatsSection.vue")['default']>

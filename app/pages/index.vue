@@ -5,6 +5,7 @@
       :title="landingHero.title"
       :lead="landingHero.lead"
     />
+    <SectionsPartnerParade />
     <SectionsServicesGrid />
 
     <section ref="trustRef" class="bg-white">
