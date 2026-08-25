@@ -8,7 +8,6 @@ Kaiser - Joseph - Straße 194
 Amtsgericht Freiburg i. Br. (HRB 731407)
 
 **Vertreten durch:**  
-Laszlo Bojarski  
 Enrico Stanciu
 
 ## Kontakt
@@ -30,7 +29,7 @@ Durlacher Allee 56
 
 ## Redaktionell verantwortlich
 
-Laszlo Bojarski
+Elias Englen
 
 ## EU-Streitschlichtung
 
