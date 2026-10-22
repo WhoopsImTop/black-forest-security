@@ -2,10 +2,14 @@
   <SectionsPageHero
     section-id="home"
     :image="image"
+    :image-mobile="imageMobile"
     :title="title"
     :lead="lead"
     :image-alt="imageAlt"
   >
+    <template #rating>
+      <UiGoogleRatingBadge dark />
+    </template>
     <template #actions>
       <UiButtonLink
         to="/#leistungen"
@@ -28,6 +32,7 @@
 <script setup>
 defineProps({
   image: { type: String, required: true },
+  imageMobile: { type: String, default: undefined },
   imageAlt: { type: String, default: "Black Forest Security GmbH" },
   title: { type: String, required: true },
   lead: { type: String, required: true },

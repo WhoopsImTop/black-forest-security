@@ -10,6 +10,8 @@
   <a
     v-else-if="href"
     :href="href"
+    :target="$attrs.target"
+    :rel="$attrs.rel"
     class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium uppercase transition-colors duration-300"
     :class="[variantClass, $attrs.class]"
   >

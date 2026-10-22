@@ -18,7 +18,7 @@ export const impressumContent: LegalPageContent = {
     { type: "h2", text: "Kontakt" },
     {
       type: "p",
-      text: "Telefon: 01786375306\nE-Mail: info@black-forest-security.de",
+      text: "Telefon: 07613896836\nE-Mail: info@black-forest-security.de",
     },
     { type: "h2", text: "Umsatzsteuer-ID" },
     {
@@ -31,7 +31,7 @@ export const impressumContent: LegalPageContent = {
       text: "Name und Sitz des Versicherers:\nBadischer Gemeinde-Versicherungs-Verband\nDurlacher Allee 56\n76131 Karlsruhe",
     },
     { type: "h2", text: "Redaktionell verantwortlich" },
-    { type: "p", text: "Laszlo Bojarski" },
+    { type: "p", text: "Elias Englen" },
     { type: "h2", text: "EU-Streitschlichtung" },
     {
       type: "p",

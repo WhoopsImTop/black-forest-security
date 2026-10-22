@@ -6,9 +6,12 @@
     <div class="aspect-[16/10] overflow-hidden bg-neutral-100">
       <img
         :src="service.image"
-        :alt="service.title"
+        :alt="`${service.title} in Freiburg – Black Forest Security`"
         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 object-top"
+        width="1080"
+        height="1080"
         loading="lazy"
+        decoding="async"
       />
     </div>
     <div class="flex flex-1 flex-col p-6">

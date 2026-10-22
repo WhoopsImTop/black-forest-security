@@ -2,73 +2,11 @@ import type { CityPageContent } from "./types";
 
 export const cityPages: CityPageContent[] = [
   {
-    slug: "freiburg",
-    city: "Freiburg",
-    region: "Breisgau",
-    seo: {
-      title: "Sicherheitsdienst in Freiburg | Black Forest Security GmbH",
-      description:
-        "Sicherheitsdienst Freiburg: Objektschutz, Veranstaltungsschutz, Türsteher und Revierdienst – regionales Team mit kurzen Reaktionszeiten.",
-    },
-    heroTitle: "Sicherheitsdienst in Freiburg",
-    heroLead:
-      "Professionelle Sicherheitskonzepte für Unternehmen, Veranstaltungen, Wohnanlagen und Baustellen in Freiburg sowie den angrenzenden Stadtteilen.",
-    trustTitle: "Regional vor Ort in Freiburg",
-    trustParagraphs: [
-      "Als Sicherheitsdienst in Freiburg begleiten wir Sie von der Altstadt über das Industriegebiet Nord bis in stark frequentierte Quartiere – mit festen Ansprechpartnern und klaren Einsatzabläufen.",
-      "Durch kurze Wege, regionale Ortskenntnis und eingespielte Prozesse können wir in Freiburg sehr schnell auf neue Lagen reagieren und Maßnahmen direkt nachschärfen.",
-      "Gerade bei gemischten Standorten mit Publikumsverkehr profitieren unsere Auftraggeber von einem Sicherheitsdienst, der präventiv arbeitet und trotzdem jederzeit handlungsfähig bleibt.",
-    ],
-    sections: [
-      {
-        id: "leistungen-freiburg",
-        title: "Unsere Leistungen in Freiburg",
-        paragraphs: [
-          "Wir sichern Veranstaltungen, Gewerbeobjekte und sensible Areale in Freiburg mit individuell abgestimmten Einsatzkonzepten, die auf Zielgruppe, Öffnungszeiten und Risikoprofil zugeschnitten sind.",
-          "Je nach Bedarf kombinieren wir Zugangskontrollen, präventive Präsenz und mobile Revierfahrten, damit Sicherheit sichtbar und gleichzeitig professionell deeskalierend umgesetzt wird.",
-          "Unser Fokus liegt auf nachvollziehbaren Standards, klarer Kommunikation mit Verantwortlichen vor Ort und einer sauberen Dokumentation aller relevanten Vorkommnisse.",
-        ],
-        centered: true,
-      },
-      {
-        id: "einsatzgebiete-freiburg",
-        title: "Typische Einsatzorte",
-        paragraphs: [
-          "Wir sind regelmäßig in der Innenstadt, in Gewerbeparks sowie rund um Veranstaltungslocations in Freiburg im Einsatz und kennen die typischen Anforderungen stark frequentierter Bereiche.",
-          "Auch für temporäre Anlässe wie Stadtfeste, Umbauphasen, Objektübergaben oder saisonale Hochzeiten stellen wir kurzfristig leistungsfähige Teams bereit.",
-          "So erhalten Sie einen Sicherheitsdienst in Freiburg, der operative Stabilität schafft und gleichzeitig flexibel auf Veränderungen reagieren kann.",
-        ],
-        centered: true,
-      },
-    ],
-    faq: [
-      {
-        question: "Wie schnell können Sie in Freiburg starten?",
-        answer:
-          "Je nach Einsatzart können wir kurzfristige Termine realisieren. Für regelmäßige Einsätze planen wir gemeinsam einen festen Starttermin inklusive Verantwortlichkeiten und Kommunikationswegen.",
-      },
-      {
-        question: "Bieten Sie auch Nacht- und Wochenenddienste an?",
-        answer:
-          "Ja, wir decken Einsätze rund um die Uhr ab, inklusive Wochenenden und Feiertagen. Dabei berücksichtigen wir objektspezifische Ruhezeiten und sensible Zeitfenster.",
-      },
-      {
-        question: "Welche Leistungen werden in Freiburg am häufigsten gebucht?",
-        answer:
-          "Besonders gefragt sind Objektschutz, Veranstaltungsschutz, Kontrollgänge außerhalb der Geschäftszeiten und kombinierte Konzepte mit Zutrittskontrolle und Revierdienst.",
-      },
-    ],
-    keywordTarget: {
-      primary: "Sicherheitsdienst Freiburg",
-      secondary: ["Objektschutz Freiburg", "Veranstaltungsschutz Freiburg"],
-    },
-  },
-  {
     slug: "offenburg",
     city: "Offenburg",
     region: "Ortenau",
     seo: {
-      title: "Sicherheitsdienst in Offenburg | Black Forest Security GmbH",
+      title: "Sicherheitsdienst in Offenburg | Black Forest Security",
       description:
         "Sicherheitsdienst Offenburg: Objektschutz, Veranstaltungsschutz und Streifendienst – regionale Einsatzplanung und klare Reaktionswege.",
     },
@@ -125,7 +63,7 @@ export const cityPages: CityPageContent[] = [
     city: "Emmendingen",
     region: "Landkreis Emmendingen",
     seo: {
-      title: "Sicherheitsdienst in Emmendingen | Black Forest Security GmbH",
+      title: "Sicherheitsdienst in Emmendingen | Black Forest Security",
       description:
         "Sicherheitsdienst Emmendingen: Objektschutz, Veranstaltungsschutz und Baustellenüberwachung mit verlässlicher Einsatzkoordination.",
     },
@@ -182,7 +120,7 @@ export const cityPages: CityPageContent[] = [
     city: "Lörrach",
     region: "Dreiländereck",
     seo: {
-      title: "Sicherheitsdienst in Lörrach | Black Forest Security GmbH",
+      title: "Sicherheitsdienst in Lörrach | Black Forest Security",
       description:
         "Sicherheitsdienst Lörrach: Objektschutz, Veranstaltungsschutz und Revierdienst für Unternehmen und Events im Dreiländereck.",
     },
@@ -239,7 +177,7 @@ export const cityPages: CityPageContent[] = [
     city: "Weil am Rhein",
     region: "Landkreis Lörrach",
     seo: {
-      title: "Sicherheitsdienst in Weil am Rhein | Black Forest Security GmbH",
+      title: "Sicherheitsdienst in Weil am Rhein | Black Forest Security",
       description:
         "Sicherheitsdienst Weil am Rhein: Objektschutz, Revierdienst und Veranstaltungsschutz mit regionalem Team im Grenzraum.",
     },
@@ -296,7 +234,7 @@ export const cityPages: CityPageContent[] = [
     city: "Bad Krozingen",
     region: "Markgräflerland",
     seo: {
-      title: "Sicherheitsdienst in Bad Krozingen | Black Forest Security GmbH",
+      title: "Sicherheitsdienst in Bad Krozingen | Black Forest Security",
       description:
         "Sicherheitsdienst Bad Krozingen: Objektschutz, Veranstaltungsschutz und mobile Revierfahrten mit klaren Einsatzstandards.",
     },
@@ -353,7 +291,7 @@ export const cityPages: CityPageContent[] = [
     city: "Waldkirch",
     region: "Elztal",
     seo: {
-      title: "Sicherheitsdienst in Waldkirch | Black Forest Security GmbH",
+      title: "Sicherheitsdienst in Waldkirch | Black Forest Security",
       description:
         "Sicherheitsdienst Waldkirch: Objektschutz, Veranstaltungsschutz und Baustellenüberwachung mit lokaler Einsatzplanung.",
     },
@@ -410,7 +348,7 @@ export const cityPages: CityPageContent[] = [
     city: "Titisee-Neustadt",
     region: "Hochschwarzwald",
     seo: {
-      title: "Sicherheitsdienst in Titisee-Neustadt | Black Forest Security GmbH",
+      title: "Sicherheitsdienst in Titisee-Neustadt | Black Forest Security",
       description:
         "Sicherheitsdienst Titisee-Neustadt: Veranstaltungsschutz, Objektschutz und flexible Revierdienste – auch in der Hochsaison.",
     },
@@ -464,8 +402,8 @@ export const cityPages: CityPageContent[] = [
   },
 ];
 
+/** Freiburg wird von der Startseite abgedeckt (/standorte/freiburg/ → 301 auf /). */
 export const cityPilotSlugs = [
-  "freiburg",
   "offenburg",
   "emmendingen",
   "loerrach",

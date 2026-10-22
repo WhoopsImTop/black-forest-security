@@ -2,6 +2,7 @@
   <div>
     <SectionsPageHero
       :image="heroImages.ueberUns"
+      :image-alt="heroAlts.ueberUns"
       title="Über uns"
       lead="Erfahrenes Team, klare Prozesse, höchster Anspruch an Sicherheit."
     />
@@ -16,7 +17,7 @@
 </template>
 
 <script setup>
-import { heroImages } from "~/content/hero-images";
+import { heroAlts, heroImages, ogImages } from "~/content/hero-images";
 import { teamMembers, ueberUnsIntro, ueberUnsSeo } from "~/content/team";
 
 import { buildBreadcrumbSchema, toJsonLdGraph } from "~/utils/seo/schema";
@@ -25,7 +26,7 @@ usePageSeo({
   title: ueberUnsSeo.title,
   description: ueberUnsSeo.description,
   path: "/ueber-uns",
-  ogImage: heroImages.ueberUns,
+  ogImage: ogImages.ueberUns,
   jsonLd: toJsonLdGraph([
     buildBreadcrumbSchema([
       { name: "Startseite", path: "/" },

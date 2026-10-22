@@ -1,7 +1,7 @@
 import type { SeoMeta } from "./types";
 
 export const standorteSeo: SeoMeta = {
-  title: "Standorte | Black Forest Security GmbH",
+  title: "Sicherheitsdienst in Südbaden – Standorte | Black Forest Security",
   description:
     "Sicherheitsdienst in Freiburg, Offenburg, Lörrach, Emmendingen, Weil am Rhein, Bad Krozingen, Waldkirch und Titisee-Neustadt – lokale Teams, kurze Wege.",
 };

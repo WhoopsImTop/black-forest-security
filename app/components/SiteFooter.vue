@@ -13,8 +13,20 @@
           <div class="space-y-3 text-sm text-neutral-400">
             <p>Black Forest Security GmbH<br />Kaiser-Joseph-Straße 194<br />79098 Freiburg</p>
             <div>
-              <a href="mailto:info@black-forest-security.de" class="block hover:text-white">info@black-forest-security.de</a>
-              <a href="tel:07613896836" class="block hover:text-white">0761 3896836</a>
+              <a
+                href="mailto:info@black-forest-security.de"
+                class="block hover:text-white"
+                @click="trackConversion('email')"
+              >
+                info@black-forest-security.de
+              </a>
+              <a
+                href="tel:07613896836"
+                class="block hover:text-white"
+                @click="trackConversion('phone')"
+              >
+                0761 3896836
+              </a>
             </div>
           </div>
         </section>
@@ -42,6 +54,7 @@
             <NuxtLink to="/kontakt" class="block hover:text-white">Kontakt</NuxtLink>
             <NuxtLink to="/ueber-uns" class="block hover:text-white">Über uns</NuxtLink>
             <NuxtLink to="/karriere" class="block hover:text-white">Karriere</NuxtLink>
+            <NuxtLink to="/ratgeber/sicherheitsdienst-kosten/" class="block hover:text-white">Sicherheitsdienst Kosten</NuxtLink>
           </div>
         </section>
       </div>
@@ -55,4 +68,6 @@
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+const { trackConversion } = useGoogleAds();
+</script>

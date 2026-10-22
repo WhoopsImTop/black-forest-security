@@ -1,7 +1,7 @@
 import type { SeoMeta, TeamMember } from "./types";
 
 export const ueberUnsSeo: SeoMeta = {
-  title: "Über uns | Black Forest Security GmbH",
+  title: "Über uns – Sicherheitsfirma aus Freiburg | Black Forest Security",
   description:
     "Black Forest Security GmbH in Freiburg: erfahrenes Sicherheitsteam mit rund 68 Mitarbeitern für professionelle Schutzdienstleistungen in der Region.",
 };
@@ -16,7 +16,7 @@ export const ueberUnsIntro = {
 };
 
 export const teamMembers: TeamMember[] = [
-  { name: "Enrico Stanciu", role: "Geschäftsführer", image: "/enrico-stancio.jpeg" },
-  { name: "Mervan Aslan", role: "Office Management & Buchhaltung", image: "/mervan-aslan.jpg" },
-  { name: "Andy Fischer", role: "Leiter Personal- und Organisationsentwicklung", image: "/andy-fischer.jpg" },
+  { name: "Enrico Stanciu", role: "Geschäftsführer", image: "/img/enrico-stanciu.webp" },
+  { name: "Mervan Arslan", role: "Office Management & Buchhaltung", image: "/img/mervan-aslan.webp" },
+  { name: "Andy Fischer", role: "Leiter Personal- und Organisationsentwicklung", image: "/img/andy-fischer.webp" },
 ];

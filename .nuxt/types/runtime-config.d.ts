@@ -36,6 +36,16 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
    siteUrl: string,
 
    chatWebhookUrl: string,
+
+   googleAdsId: string,
+
+   googleAdsConversionPhone: string,
+
+   googleAdsConversionEmail: string,
+
+   googleAdsConversionChat: string,
+
+   googleAdsConversionKontakt: string,
   }
 declare module '@nuxt/schema' {
   interface RuntimeConfig extends UserRuntimeConfig {}

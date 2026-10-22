@@ -2,6 +2,7 @@
   <div v-if="cityContent">
     <SectionsPageHero
       :image="heroImages.ueberUns"
+      :image-alt="`Sicherheitsdienst ${cityContent.city} – Team von Black Forest Security`"
       :title="cityContent.heroTitle"
       :lead="cityContent.heroLead"
     />
@@ -31,7 +32,31 @@
       :centered="section.centered ?? true"
     />
 
+    <section class="bg-neutral-50">
+      <div class="container mx-auto px-4 section-pad">
+        <div class="mx-auto max-w-5xl">
+          <UiSectionHeading
+            :title="`Unsere Leistungen in ${cityContent.city}`"
+            :lead="`Alle Sicherheitsdienstleistungen bieten wir auch in ${cityContent.city} und Umgebung an.`"
+          />
+          <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <li v-for="service in services" :key="service.slug">
+              <NuxtLink
+                :to="`${service.to}/`"
+                class="block h-full border border-neutral-200 bg-white p-5 transition-colors hover:border-black"
+              >
+                <span class="font-heading text-base font-bold text-black">{{ service.title }}</span>
+                <span class="mt-2 block text-sm text-neutral-600">{{ service.description }}</span>
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <SectionsTrustSection />
     <SectionsFaqAccordion :items="cityContent.faq" centered />
+    <SectionsServiceAreas title="Weitere Einsatzgebiete" />
     <SectionsCtaBand
       :title="`Sicherheitsanfrage für ${cityContent.city}`"
       lead="Kontaktieren Sie uns für ein individuelles Sicherheitskonzept in Ihrer Stadt."
@@ -53,7 +78,7 @@
       centered
     >
       <div class="mt-8">
-        <UiButtonLink to="/standorte" variant="outline">
+        <UiButtonLink to="/standorte/" variant="outline">
           Zur Standorte-Übersicht
         </UiButtonLink>
       </div>
@@ -63,7 +88,8 @@
 
 <script setup>
 import { cityPages } from "~/content/cities";
-import { heroImages } from "~/content/hero-images";
+import { heroImages, ogImages } from "~/content/hero-images";
+import { services } from "~/content/services";
 
 const route = useRoute();
 
@@ -74,7 +100,7 @@ const cityContent = computed(() =>
 watchEffect(() => {
   const city = cityContent.value;
   if (city) {
-    useCityPageSeo(city, heroImages.ueberUns);
+    useCityPageSeo(city, ogImages.ueberUns);
     return;
   }
 

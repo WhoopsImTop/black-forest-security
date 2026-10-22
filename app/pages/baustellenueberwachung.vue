@@ -1,26 +1,15 @@
 <template>
-  <div>
-    <SectionsPageHero
-      :image="heroImages.baustellenueberwachung"
-      :title="content.title"
-      :lead="content.lead"
-    />
-    <SectionsContentSection
-      v-for="section in content.sections"
-      :key="section.id"
-      :title="section.title"
-      :paragraphs="section.paragraphs"
-      :centered="section.centered ?? true"
-    />
-    <SectionsFeatureList v-if="content.features" :items="content.features" />
-    <SectionsMoreServicesSlider current-slug="baustellenueberwachung" />
-    <SectionsCtaBand />
-  </div>
+  <SectionsServicePage
+    :content="content"
+    slug="baustellenueberwachung"
+    :image="heroImages.baustellenueberwachung"
+    :image-alt="heroAlts.baustellenueberwachung"
+  />
 </template>
 
 <script setup>
-import { heroImages } from "~/content/hero-images";
+import { heroAlts, heroImages, ogImages } from "~/content/hero-images";
 import { baustellenueberwachungContent as content } from "~/content/services/baustellenueberwachung";
 
-useServicePageSeo(content, "baustellenueberwachung", heroImages.baustellenueberwachung);
+useServicePageSeo(content, "baustellenueberwachung", ogImages.baustellenueberwachung);
 </script>

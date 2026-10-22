@@ -103,10 +103,17 @@
             <a
               href="mailto:info@black-forest-security.de"
               class="block text-sm font-medium text-neutral-600 hover:text-black"
+              @click="trackConversion('email')"
             >
               info@black-forest-security.de
             </a>
-            <a href="tel:07613896836" class="mt-2 text-sm text-neutral-500">0761 3896836</a>
+            <a
+              href="tel:07613896836"
+              class="mt-2 text-sm text-neutral-500"
+              @click="trackConversion('phone')"
+            >
+              0761 3896836
+            </a>
           </div>
         </nav>
       </div>
@@ -115,6 +122,8 @@
 </template>
 
 <script setup>
+const { trackConversion } = useGoogleAds();
+
 const navigationItems = [
   { label: "Leistungen", to: "/#leistungen" },
   { label: "Standorte", to: "/standorte" },

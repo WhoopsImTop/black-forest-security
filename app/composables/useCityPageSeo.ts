@@ -2,7 +2,7 @@ import type { CityPageContent } from "~/content/types";
 import {
   buildBreadcrumbSchema,
   buildJsonLdPayloads,
-  buildLocalBusinessForCity,
+  buildCityServiceSchema,
 } from "~/utils/seo/schema";
 
 export function useCityPageSeo(city: CityPageContent, ogImage?: string) {
@@ -15,7 +15,7 @@ export function useCityPageSeo(city: CityPageContent, ogImage?: string) {
     ogImage,
     jsonLd: buildJsonLdPayloads(
       [
-        buildLocalBusinessForCity({
+        buildCityServiceSchema({
           city: city.city,
           region: city.region,
           description: city.seo.description,

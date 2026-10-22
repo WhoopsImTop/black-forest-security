@@ -12,9 +12,14 @@
     <template v-if="hasImage">
       <img
         :src="image"
+        :srcset="imageMobile ? `${imageMobile} 960w, ${image} 1920w` : undefined"
+        :sizes="imageMobile ? '100vw' : undefined"
         :alt="imageAlt || title"
         class="hero-image absolute inset-0 h-full w-full object-cover"
+        width="1920"
+        height="1080"
         fetchpriority="high"
+        decoding="async"
       />
       <div
         class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/35"
@@ -41,6 +46,9 @@
           >
             {{ lead }}
           </p>
+          <div v-if="$slots.rating" class="hero-lead mt-6">
+            <slot name="rating" />
+          </div>
           <div v-if="$slots.actions" class="hero-cta mt-10 flex flex-wrap gap-4">
             <slot name="actions" />
           </div>
@@ -53,6 +61,7 @@
 <script setup>
 const props = defineProps({
   image: { type: String, default: undefined },
+  imageMobile: { type: String, default: undefined },
   imageAlt: { type: String, default: undefined },
   title: { type: String, required: true },
   lead: { type: String, default: undefined },

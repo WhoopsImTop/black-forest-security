@@ -1,26 +1,15 @@
 <template>
-  <div>
-    <SectionsPageHero
-      :image="heroImages.tuersteher"
-      :title="content.title"
-      :lead="content.lead"
-    />
-    <SectionsContentSection
-      v-for="section in content.sections"
-      :key="section.id"
-      :title="section.title"
-      :paragraphs="section.paragraphs"
-      :centered="section.centered ?? true"
-    />
-    <SectionsFeatureList v-if="content.features" :items="content.features" />
-    <SectionsMoreServicesSlider current-slug="tuersteher" />
-    <SectionsCtaBand />
-  </div>
+  <SectionsServicePage
+    :content="content"
+    slug="tuersteher"
+    :image="heroImages.tuersteher"
+    :image-alt="heroAlts.tuersteher"
+  />
 </template>
 
 <script setup>
-import { heroImages } from "~/content/hero-images";
+import { heroAlts, heroImages, ogImages } from "~/content/hero-images";
 import { tuersteherContent as content } from "~/content/services/tuersteher";
 
-useServicePageSeo(content, "tuersteher", heroImages.tuersteher);
+useServicePageSeo(content, "tuersteher", ogImages.tuersteher);
 </script>

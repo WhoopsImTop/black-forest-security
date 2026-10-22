@@ -1,7 +1,7 @@
 import type { SeoMeta } from "./types";
 
 export const karriereSeo: SeoMeta = {
-  title: "Karriere | Black Forest Security GmbH",
+  title: "Jobs im Sicherheitsdienst Freiburg | Black Forest Security",
   description:
     "Initiativbewerbung bei Black Forest Security in Freiburg – Sicherheitsbranche, regionales Team, aktuell keine offenen Stellen.",
 };

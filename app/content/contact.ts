@@ -2,7 +2,7 @@ import type { SeoMeta } from "./types";
 import { siteContact } from "./site";
 
 export const kontaktSeo: SeoMeta = {
-  title: "Kontakt | Black Forest Security GmbH",
+  title: "Kontakt – Sicherheitsdienst Freiburg | Black Forest Security",
   description:
     "Kontakt zur Black Forest Security GmbH in Freiburg: Kaiser-Joseph-Straße 194, Telefon 0761 3896836, E-Mail info@black-forest-security.de – 24/7 erreichbar.",
 };

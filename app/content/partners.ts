@@ -56,9 +56,9 @@ export const partners: PartnerLogo[] = [
     lightOnDark: true,
   },
   {
-    name: "FREBURG",
+    name: "Freiburg",
     src: "/Partner/freiburg.svg",
-    alt: "FREBURG",
+    alt: "Stadt Freiburg",
     lightOnDark: true,
   },
 ];

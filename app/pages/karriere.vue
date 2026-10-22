@@ -2,6 +2,7 @@
   <div>
     <SectionsPageHero
       :image="heroImages.karriere"
+      :image-alt="heroAlts.karriere"
       :title="karriereContent.title"
       :lead="karriereContent.lead"
     />
@@ -21,14 +22,14 @@
 
 <script setup>
 import { karriereContent, karriereSeo } from "~/content/karriere";
-import { heroImages } from "~/content/hero-images";
+import { heroAlts, heroImages, ogImages } from "~/content/hero-images";
 import { buildBreadcrumbSchema, toJsonLdGraph } from "~/utils/seo/schema";
 
 usePageSeo({
   title: karriereSeo.title,
   description: karriereSeo.description,
   path: "/karriere",
-  ogImage: heroImages.karriere,
+  ogImage: ogImages.karriere,
   jsonLd: toJsonLdGraph([
     buildBreadcrumbSchema([
       { name: "Startseite", path: "/" },

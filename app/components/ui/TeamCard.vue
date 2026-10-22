@@ -4,9 +4,12 @@
       <img
         v-if="image"
         :src="image"
-        :alt="`Porträt von ${name}`"
+        :alt="`${name} – ${role} bei Black Forest Security in Freiburg`"
         class="h-full w-full object-cover"
+        width="600"
+        height="600"
         loading="lazy"
+        decoding="async"
       />
       <div
         v-else

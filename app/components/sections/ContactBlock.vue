@@ -7,6 +7,7 @@
           <a
             :href="`mailto:${email}`"
             class="inline-flex items-center justify-center bg-black px-8 py-4 text-[11px] font-medium uppercase tracking-[0.22em] text-white transition-colors hover:bg-neutral-800"
+            @click="trackConversion('email')"
           >
             {{ email }}
           </a>
@@ -30,7 +31,11 @@
           </div>
           <div>
             <h3 class="mb-3 font-heading text-base font-bold text-black">Telefon</h3>
-            <a :href="phoneHref" class="text-sm text-neutral-700 hover:text-black">
+            <a
+              :href="phoneHref"
+              class="text-sm text-neutral-700 hover:text-black"
+              @click="trackConversion('phone')"
+            >
               {{ phone }}
             </a>
           </div>
@@ -50,5 +55,6 @@ const props = defineProps({
   phone: { type: String, required: true },
 });
 
+const { trackConversion } = useGoogleAds();
 const phoneHref = computed(() => `tel:${props.phone.replace(/\s/g, "")}`);
 </script>

@@ -2,6 +2,7 @@
   <div>
     <SectionsPageHero
       :image="heroImages.kontakt"
+      :image-alt="heroAlts.kontakt"
       :title="kontaktContent.title"
       :lead="kontaktContent.lead"
     />
@@ -16,7 +17,7 @@
 
 <script setup>
 import { kontaktContent, kontaktSeo } from "~/content/contact";
-import { heroImages } from "~/content/hero-images";
+import { heroAlts, heroImages, ogImages } from "~/content/hero-images";
 
 import {
   buildBreadcrumbSchema,
@@ -28,7 +29,7 @@ usePageSeo({
   title: kontaktSeo.title,
   description: kontaktSeo.description,
   path: "/kontakt",
-  ogImage: heroImages.kontakt,
+  ogImage: ogImages.kontakt,
   jsonLd: toJsonLdGraph([
     buildContactPageSchema(),
     buildBreadcrumbSchema([

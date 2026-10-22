@@ -28,11 +28,15 @@ interface _GlobalComponents {
   SectionsMoreServicesSlider: typeof import("../../app/components/sections/MoreServicesSlider.vue")['default']
   SectionsPageHero: typeof import("../../app/components/sections/PageHero.vue")['default']
   SectionsPartnerParade: typeof import("../../app/components/sections/PartnerParade.vue")['default']
+  SectionsServiceAreas: typeof import("../../app/components/sections/ServiceAreas.vue")['default']
   SectionsServiceCard: typeof import("../../app/components/sections/ServiceCard.vue")['default']
+  SectionsServicePage: typeof import("../../app/components/sections/ServicePage.vue")['default']
   SectionsServicesGrid: typeof import("../../app/components/sections/ServicesGrid.vue")['default']
   SectionsStatsSection: typeof import("../../app/components/sections/StatsSection.vue")['default']
   SectionsTeamGrid: typeof import("../../app/components/sections/TeamGrid.vue")['default']
+  SectionsTrustSection: typeof import("../../app/components/sections/TrustSection.vue")['default']
   UiButtonLink: typeof import("../../app/components/ui/ButtonLink.vue")['default']
+  UiGoogleRatingBadge: typeof import("../../app/components/ui/GoogleRatingBadge.vue")['default']
   UiProseContent: typeof import("../../app/components/ui/ProseContent.vue")['default']
   UiSectionHeading: typeof import("../../app/components/ui/SectionHeading.vue")['default']
   UiTeamCard: typeof import("../../app/components/ui/TeamCard.vue")['default']
@@ -74,11 +78,15 @@ interface _GlobalComponents {
   LazySectionsMoreServicesSlider: LazyComponent<typeof import("../../app/components/sections/MoreServicesSlider.vue")['default']>
   LazySectionsPageHero: LazyComponent<typeof import("../../app/components/sections/PageHero.vue")['default']>
   LazySectionsPartnerParade: LazyComponent<typeof import("../../app/components/sections/PartnerParade.vue")['default']>
+  LazySectionsServiceAreas: LazyComponent<typeof import("../../app/components/sections/ServiceAreas.vue")['default']>
   LazySectionsServiceCard: LazyComponent<typeof import("../../app/components/sections/ServiceCard.vue")['default']>
+  LazySectionsServicePage: LazyComponent<typeof import("../../app/components/sections/ServicePage.vue")['default']>
   LazySectionsServicesGrid: LazyComponent<typeof import("../../app/components/sections/ServicesGrid.vue")['default']>
   LazySectionsStatsSection: LazyComponent<typeof import("../../app/components/sections/StatsSection.vue")['default']>
   LazySectionsTeamGrid: LazyComponent<typeof import("../../app/components/sections/TeamGrid.vue")['default']>
+  LazySectionsTrustSection: LazyComponent<typeof import("../../app/components/sections/TrustSection.vue")['default']>
   LazyUiButtonLink: LazyComponent<typeof import("../../app/components/ui/ButtonLink.vue")['default']>
+  LazyUiGoogleRatingBadge: LazyComponent<typeof import("../../app/components/ui/GoogleRatingBadge.vue")['default']>
   LazyUiProseContent: LazyComponent<typeof import("../../app/components/ui/ProseContent.vue")['default']>
   LazyUiSectionHeading: LazyComponent<typeof import("../../app/components/ui/SectionHeading.vue")['default']>
   LazyUiTeamCard: LazyComponent<typeof import("../../app/components/ui/TeamCard.vue")['default']>

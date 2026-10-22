@@ -12,11 +12,13 @@ export interface PageSeoOptions {
   robots?: string;
 }
 
-function normalizePath(path: string): string {
+/** Pfade immer mit führendem und abschließendem Slash (entspricht nitro trailingSlash + Sitemap). */
+export function normalizePath(path: string): string {
   if (!path || path === "/") {
     return "/";
   }
-  return path.startsWith("/") ? path : `/${path}`;
+  const withLeading = path.startsWith("/") ? path : `/${path}`;
+  return withLeading.endsWith("/") ? withLeading : `${withLeading}/`;
 }
 
 function resolveOgImage(ogImage?: string): string {
@@ -40,7 +42,7 @@ function normalizeJsonLdPayloads(
 
 export function usePageSeo(options: PageSeoOptions) {
   const path = normalizePath(options.path);
-  const canonicalUrl = `${siteMeta.siteUrl}${path === "/" ? "" : path}`;
+  const canonicalUrl = `${siteMeta.siteUrl}${path}`;
   const ogImage = resolveOgImage(options.ogImage);
   const jsonLdPayloads = normalizeJsonLdPayloads(options.jsonLd);
 
