@@ -2,7 +2,9 @@
   <div>
     <SectionsPageHero
       :image="heroImages.ueberUns"
+      :image-mobile="heroImages.ueberUnsMobile"
       :image-alt="heroAlts.ueberUns"
+      image-position="center 20%"
       title="Über uns"
       lead="Erfahrenes Team, klare Prozesse, höchster Anspruch an Sicherheit."
     />

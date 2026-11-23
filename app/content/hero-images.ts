@@ -7,9 +7,11 @@ export const heroImages = {
   tuersteher: "/img/tuersteher-freiburg.webp",
   baustellenueberwachung: "/img/baustellenueberwachung-freiburg.webp",
   streifenUndRevierdienst: "/img/streifen-revierdienst-freiburg.webp",
-  ueberUns: "/img/team-black-forest-security-freiburg.webp",
+  ueberUns: "/img/ueber-uns-team-black-forest-security-freiburg.webp",
+  ueberUnsMobile: "/img/ueber-uns-team-black-forest-security-freiburg-960.webp",
   kontakt: "/img/kontakt-black-forest-security-freiburg.webp",
-  karriere: "/img/karriere-sicherheitsdienst-freiburg.webp",
+  karriere: "/img/karriere-team-sicherheitsdienst-freiburg.webp",
+  karriereMobile: "/img/karriere-team-sicherheitsdienst-freiburg-960.webp",
 } as const;
 
 /** JPG-Varianten für og:image (Social-Media-Vorschauen unterstützen WebP nicht überall). */
@@ -20,9 +22,9 @@ export const ogImages = {
   tuersteher: "/tuersteher.jpg",
   baustellenueberwachung: "/streifendienst.jpg",
   streifenUndRevierdienst: "/streifen-revierdeinst.jpg",
-  ueberUns: "/black-forest-security.jpg",
+  ueberUns: "/og/ueber-uns.jpg",
   kontakt: "/ueber-uns.jpg",
-  karriere: "/black-forest-security-2.jpg",
+  karriere: "/og/karriere.jpg",
 } as const;
 
 /** Alt-Texte für Hero-Bilder */
@@ -33,7 +35,7 @@ export const heroAlts = {
   tuersteher: "Türsteher von Black Forest Security beim Einlass in Freiburg",
   baustellenueberwachung: "Baustellenbewachung in Freiburg durch Sicherheitspersonal",
   streifenUndRevierdienst: "Streifen- und Revierdienst in Freiburg",
-  ueberUns: "Team der Black Forest Security GmbH in Freiburg",
+  ueberUns: "Team der Black Forest Security GmbH bei einer Besprechung im Büro in Freiburg",
   kontakt: "Kontakt zur Black Forest Security GmbH in Freiburg",
-  karriere: "Karriere im Sicherheitsdienst bei Black Forest Security in Freiburg",
+  karriere: "Karriere im Sicherheitsdienst – Team von Black Forest Security in Freiburg",
 } as const;

@@ -2,6 +2,7 @@
   <div>
     <SectionsPageHero
       :image="heroImages.karriere"
+      :image-mobile="heroImages.karriereMobile"
       :image-alt="heroAlts.karriere"
       :title="karriereContent.title"
       :lead="karriereContent.lead"

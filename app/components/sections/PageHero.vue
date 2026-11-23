@@ -16,6 +16,7 @@
         :sizes="imageMobile ? '100vw' : undefined"
         :alt="imageAlt || title"
         class="hero-image absolute inset-0 h-full w-full object-cover"
+        :style="imagePosition ? { objectPosition: imagePosition } : undefined"
         width="1920"
         height="1080"
         fetchpriority="high"
@@ -63,6 +64,8 @@ const props = defineProps({
   image: { type: String, default: undefined },
   imageMobile: { type: String, default: undefined },
   imageAlt: { type: String, default: undefined },
+  /** CSS object-position, z. B. "center 25%", wenn Köpfe sonst abgeschnitten werden */
+  imagePosition: { type: String, default: undefined },
   title: { type: String, required: true },
   lead: { type: String, default: undefined },
   sectionId: { type: String, default: undefined },
