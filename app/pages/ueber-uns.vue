@@ -12,13 +12,14 @@
       centered
     />
     <SectionsTeamGrid :members="teamMembers" />
+    <SectionsTeamCulture :team="teamOnSite" :values="companyValues" />
     <SectionsCtaBand />
   </div>
 </template>
 
 <script setup>
 import { heroAlts, heroImages, ogImages } from "~/content/hero-images";
-import { teamMembers, ueberUnsIntro, ueberUnsSeo } from "~/content/team";
+import { companyValues, teamMembers, teamOnSite, ueberUnsIntro, ueberUnsSeo } from "~/content/team";
 
 import { buildBreadcrumbSchema, toJsonLdGraph } from "~/utils/seo/schema";
 

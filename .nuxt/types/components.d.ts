@@ -33,6 +33,7 @@ interface _GlobalComponents {
   SectionsServicePage: typeof import("../../app/components/sections/ServicePage.vue")['default']
   SectionsServicesGrid: typeof import("../../app/components/sections/ServicesGrid.vue")['default']
   SectionsStatsSection: typeof import("../../app/components/sections/StatsSection.vue")['default']
+  SectionsTeamCulture: typeof import("../../app/components/sections/TeamCulture.vue")['default']
   SectionsTeamGrid: typeof import("../../app/components/sections/TeamGrid.vue")['default']
   SectionsTrustSection: typeof import("../../app/components/sections/TrustSection.vue")['default']
   UiButtonLink: typeof import("../../app/components/ui/ButtonLink.vue")['default']
@@ -40,6 +41,7 @@ interface _GlobalComponents {
   UiProseContent: typeof import("../../app/components/ui/ProseContent.vue")['default']
   UiSectionHeading: typeof import("../../app/components/ui/SectionHeading.vue")['default']
   UiTeamCard: typeof import("../../app/components/ui/TeamCard.vue")['default']
+  UiValueIcon: typeof import("../../app/components/ui/ValueIcon.vue")['default']
   NuxtWelcome: typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']
   NuxtLayout: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
   NuxtErrorBoundary: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -83,6 +85,7 @@ interface _GlobalComponents {
   LazySectionsServicePage: LazyComponent<typeof import("../../app/components/sections/ServicePage.vue")['default']>
   LazySectionsServicesGrid: LazyComponent<typeof import("../../app/components/sections/ServicesGrid.vue")['default']>
   LazySectionsStatsSection: LazyComponent<typeof import("../../app/components/sections/StatsSection.vue")['default']>
+  LazySectionsTeamCulture: LazyComponent<typeof import("../../app/components/sections/TeamCulture.vue")['default']>
   LazySectionsTeamGrid: LazyComponent<typeof import("../../app/components/sections/TeamGrid.vue")['default']>
   LazySectionsTrustSection: LazyComponent<typeof import("../../app/components/sections/TrustSection.vue")['default']>
   LazyUiButtonLink: LazyComponent<typeof import("../../app/components/ui/ButtonLink.vue")['default']>
@@ -90,6 +93,7 @@ interface _GlobalComponents {
   LazyUiProseContent: LazyComponent<typeof import("../../app/components/ui/ProseContent.vue")['default']>
   LazyUiSectionHeading: LazyComponent<typeof import("../../app/components/ui/SectionHeading.vue")['default']>
   LazyUiTeamCard: LazyComponent<typeof import("../../app/components/ui/TeamCard.vue")['default']>
+  LazyUiValueIcon: LazyComponent<typeof import("../../app/components/ui/ValueIcon.vue")['default']>
   LazyNuxtWelcome: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
   LazyNuxtLayout: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
   LazyNuxtErrorBoundary: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
