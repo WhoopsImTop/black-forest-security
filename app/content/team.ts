@@ -24,10 +24,10 @@ export const teamMembers: TeamMember[] = [
 export const teamOnSite = {
   title: "Die Menschen hinter unserem Einsatz",
   lead: "Rund 68 Mitarbeitende bilden unser Team. Hier sehen Sie einen Einblick in die Menschen, die Black Forest Security vor Ort vertreten. Für jedes Objekt werden Aufgaben, Einweisung und Meldewege konkret festgelegt.",
-  images: Array.from({ length: 10 }, (_, index) => {
+  images: Array.from({ length: 12 }, (_, index) => {
     const number = String(index + 1).padStart(2, "0");
     return {
-      src: `/img/team/sicherheitsmitarbeiter-${number}.webp`,
+      src: `/img/team/team-portraet-${number}.webp`,
       alt: "Sicherheitsmitarbeiter von Black Forest Security in Freiburg",
     };
   }),

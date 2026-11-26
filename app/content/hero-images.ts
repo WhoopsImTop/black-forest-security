@@ -11,6 +11,7 @@ export const heroImages = {
   ueberUnsMobile: "/img/ueber-uns-team-black-forest-security-freiburg-960.webp",
   kontakt: "/img/kontakt-black-forest-security-freiburg.webp",
   karriere: "/img/karriere-team-sicherheitsdienst-freiburg.webp",
+  standorte: "/img/standorte.jpg",
   karriereMobile: "/img/karriere-team-sicherheitsdienst-freiburg-960.webp",
 } as const;
 

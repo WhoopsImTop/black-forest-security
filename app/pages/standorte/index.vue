@@ -1,7 +1,7 @@
 <template>
   <div>
     <SectionsPageHero
-      :image="heroImages.karriere"
+      :image="heroImages.standorte"
       :image-alt="heroAlts.karriere"
       title="Sicherheitsdienst in Südbaden"
       lead="Lokale Sicherheitsdienstleistungen für Städte rund um Freiburg und den Südwesten."

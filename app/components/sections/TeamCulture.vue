@@ -2,7 +2,7 @@
   <section ref="sectionRef" class="bg-neutral-50">
     <div class="container mx-auto px-4 section-pad">
       <UiSectionHeading class="reveal" :title="team.title" :lead="team.lead" />
-      <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 lg:grid-cols-5">
+      <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-6">
         <li
           v-for="image in team.images"
           :key="image.src"
@@ -12,8 +12,8 @@
             :src="image.src"
             :alt="image.alt"
             class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-            width="196"
-            height="261"
+            width="600"
+            height="800"
             loading="lazy"
             decoding="async"
           />
